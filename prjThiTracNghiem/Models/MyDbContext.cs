@@ -23,7 +23,6 @@ namespace prjThiTracNghiem.Models
         public virtual DbSet<GiaoVien> GiaoViens { get; set; }
         public virtual DbSet<HocPhan> HocPhans { get; set; }
         public virtual DbSet<SinhVien> SinhViens { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

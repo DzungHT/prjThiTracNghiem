@@ -69,7 +69,6 @@
     <Compile Include="Models\HocPhan.cs" />
     <Compile Include="Models\MyDbContext.cs" />
     <Compile Include="Models\SinhVien.cs" />
-    <Compile Include="Models\sysdiagram.cs" />
     <Compile Include="Models\TaiKhoan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
