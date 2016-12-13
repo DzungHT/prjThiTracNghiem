@@ -86,6 +86,12 @@
     <Compile Include="Views\BackEnd\_FormChuong.Designer.cs">
       <DependentUpon>_FormChuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\BackEnd\_FormDethi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\_FormDethi.Designer.cs">
+      <DependentUpon>_FormDethi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\BackEnd\_FormGiaovien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\BackEnd\_FormChuong.resx">
       <DependentUpon>_FormChuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BackEnd\_FormDethi.resx">
+      <DependentUpon>_FormDethi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\BackEnd\_FormGiaovien.resx">
       <DependentUpon>_FormGiaovien.cs</DependentUpon>

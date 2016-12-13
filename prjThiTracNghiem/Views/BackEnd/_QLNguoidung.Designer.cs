@@ -525,7 +525,7 @@
             this.tabSinhVien.Location = new System.Drawing.Point(4, 22);
             this.tabSinhVien.Name = "tabSinhVien";
             this.tabSinhVien.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSinhVien.Size = new System.Drawing.Size(944, 448);
+            this.tabSinhVien.Size = new System.Drawing.Size(944, 492);
             this.tabSinhVien.TabIndex = 1;
             this.tabSinhVien.Text = "Sinh viên";
             this.tabSinhVien.UseVisualStyleBackColor = true;
@@ -546,9 +546,9 @@
             this.groupBox4.Controls.Add(this.btnSVTimkiem);
             this.groupBox4.Controls.Add(this.btnSVThem);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(463, 7);
+            this.groupBox4.Location = new System.Drawing.Point(467, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(474, 478);
+            this.groupBox4.Size = new System.Drawing.Size(474, 486);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách sinh viên";
@@ -560,7 +560,7 @@
             this.comboBox6.BackColor = System.Drawing.SystemColors.Window;
             this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(408, 419);
+            this.comboBox6.Location = new System.Drawing.Point(411, 425);
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(60, 24);
             this.comboBox6.TabIndex = 9;
@@ -568,7 +568,7 @@
             // numericUpDown4
             // 
             this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown4.Location = new System.Drawing.Point(150, 422);
+            this.numericUpDown4.Location = new System.Drawing.Point(154, 428);
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(46, 23);
             this.numericUpDown4.TabIndex = 8;
@@ -578,7 +578,7 @@
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(337, 422);
+            this.label14.Location = new System.Drawing.Point(340, 428);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(65, 17);
             this.label14.TabIndex = 6;
@@ -588,7 +588,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(6, 422);
+            this.label15.Location = new System.Drawing.Point(6, 430);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(142, 17);
             this.label15.TabIndex = 7;
@@ -607,7 +607,7 @@
             // 
             this.btnSVXoa.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSVXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSVXoa.Location = new System.Drawing.Point(289, 449);
+            this.btnSVXoa.Location = new System.Drawing.Point(289, 457);
             this.btnSVXoa.Name = "btnSVXoa";
             this.btnSVXoa.Size = new System.Drawing.Size(75, 23);
             this.btnSVXoa.TabIndex = 2;
@@ -623,14 +623,14 @@
             this.grvDSSinhvien.Location = new System.Drawing.Point(6, 51);
             this.grvDSSinhvien.Name = "grvDSSinhvien";
             this.grvDSSinhvien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvDSSinhvien.Size = new System.Drawing.Size(462, 365);
+            this.grvDSSinhvien.Size = new System.Drawing.Size(462, 368);
             this.grvDSSinhvien.TabIndex = 0;
             // 
             // btnSVSua
             // 
             this.btnSVSua.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSVSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSVSua.Location = new System.Drawing.Point(198, 449);
+            this.btnSVSua.Location = new System.Drawing.Point(198, 457);
             this.btnSVSua.Name = "btnSVSua";
             this.btnSVSua.Size = new System.Drawing.Size(75, 23);
             this.btnSVSua.TabIndex = 2;
@@ -652,7 +652,7 @@
             // 
             this.btnSVThem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSVThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSVThem.Location = new System.Drawing.Point(107, 449);
+            this.btnSVThem.Location = new System.Drawing.Point(107, 457);
             this.btnSVThem.Name = "btnSVThem";
             this.btnSVThem.Size = new System.Drawing.Size(75, 23);
             this.btnSVThem.TabIndex = 2;
@@ -671,13 +671,15 @@
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(7, 177);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(450, 308);
+            this.groupBox5.Size = new System.Drawing.Size(450, 352);
             this.groupBox5.TabIndex = 2;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách bài thi";
             // 
             // comboBox5
             // 
+            this.comboBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox5.BackColor = System.Drawing.SystemColors.Window;
             this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.FormattingEnabled = true;
@@ -688,6 +690,8 @@
             // 
             // numericUpDown3
             // 
+            this.numericUpDown3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDown3.Location = new System.Drawing.Point(155, 282);
             this.numericUpDown3.Name = "numericUpDown3";
@@ -696,6 +700,8 @@
             // 
             // label12
             // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(312, 282);
@@ -706,6 +712,8 @@
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(6, 282);
@@ -870,7 +878,7 @@
             this.tabNguoiDungHeThong.Controls.Add(this.groupBox7);
             this.tabNguoiDungHeThong.Location = new System.Drawing.Point(4, 22);
             this.tabNguoiDungHeThong.Name = "tabNguoiDungHeThong";
-            this.tabNguoiDungHeThong.Size = new System.Drawing.Size(944, 448);
+            this.tabNguoiDungHeThong.Size = new System.Drawing.Size(944, 492);
             this.tabNguoiDungHeThong.TabIndex = 2;
             this.tabNguoiDungHeThong.Text = "Người dùng hệ thống";
             this.tabNguoiDungHeThong.UseVisualStyleBackColor = true;
@@ -887,7 +895,7 @@
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.Location = new System.Drawing.Point(649, 11);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(292, 478);
+            this.groupBox8.Size = new System.Drawing.Size(292, 522);
             this.groupBox8.TabIndex = 6;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Cấp tài khoản";
@@ -960,7 +968,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(3, 11);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(640, 478);
+            this.groupBox7.Size = new System.Drawing.Size(640, 522);
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Danh sách tài khoản";
@@ -1016,7 +1024,7 @@
             // 
             this.btnTKXoa.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnTKXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTKXoa.Location = new System.Drawing.Point(369, 449);
+            this.btnTKXoa.Location = new System.Drawing.Point(369, 493);
             this.btnTKXoa.Name = "btnTKXoa";
             this.btnTKXoa.Size = new System.Drawing.Size(75, 23);
             this.btnTKXoa.TabIndex = 2;
@@ -1032,14 +1040,14 @@
             this.grvDSTaikhoan.Location = new System.Drawing.Point(6, 51);
             this.grvDSTaikhoan.Name = "grvDSTaikhoan";
             this.grvDSTaikhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grvDSTaikhoan.Size = new System.Drawing.Size(628, 364);
+            this.grvDSTaikhoan.Size = new System.Drawing.Size(628, 408);
             this.grvDSTaikhoan.TabIndex = 0;
             // 
             // btnTKSua
             // 
             this.btnTKSua.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnTKSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTKSua.Location = new System.Drawing.Point(278, 449);
+            this.btnTKSua.Location = new System.Drawing.Point(278, 493);
             this.btnTKSua.Name = "btnTKSua";
             this.btnTKSua.Size = new System.Drawing.Size(75, 23);
             this.btnTKSua.TabIndex = 2;
@@ -1061,7 +1069,7 @@
             // 
             this.btnTKThem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnTKThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTKThem.Location = new System.Drawing.Point(187, 449);
+            this.btnTKThem.Location = new System.Drawing.Point(187, 493);
             this.btnTKThem.Name = "btnTKThem";
             this.btnTKThem.Size = new System.Drawing.Size(75, 23);
             this.btnTKThem.TabIndex = 2;
@@ -1088,7 +1096,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(244, 31);
             this.label1.TabIndex = 1;
-            this.label1.Text = "QUẢN LÝ ĐÈ THI";
+            this.label1.Text = "QUẢN LÝ ĐỀ THI";
             // 
             // pictureBox1
             // 
