@@ -24,10 +24,22 @@ namespace prjThiTracNghiem.Views
         {
             MessageBox.Show(mess, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        private bool Login(string username, string password, out INguoiDung nguoidung)
+        private bool Login(string username, string password, out TaiKhoan taiKhoan)
         {
             MyDbContext db = new MyDbContext();
-            var taikhoan = db.TaiKhoans.Where(x => x.Username == username && x.Password == password).Exclude();
+            var taikhoans = db.TaiKhoans.Where(x => x.Username == username && x.Password == password).ToList();
+
+            if(taikhoans.Count == 1)
+            {
+                taiKhoan = taikhoans[0];
+                taiKhoan.Password = null;
+                return true;
+            }
+            else
+            {
+                taiKhoan = null;
+                return false;
+            }
 
         }
 
@@ -35,10 +47,11 @@ namespace prjThiTracNghiem.Views
         {
             if (!string.IsNullOrEmpty(txtUsername.Text.Trim()) && !string.IsNullOrEmpty(txtPassword.Text.Trim()))
             {
-                if (Login(txtUsername.Text, txtPassword.Text))
+                TaiKhoan tk;
+                if (Login(txtUsername.Text, txtPassword.Text, out tk))
                 {
                     // Đăng nhập thành công
-                    CallBack(sender, e);
+                    CallBack(tk.LoaiTaiKhoan == 1 ? tk.SinhViens.ToList()[0] as object : tk.GiaoViens.ToList()[0] as object, e);
                     SendKeys.Send("{ESC}");
                 }
                 else
