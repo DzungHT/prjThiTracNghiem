@@ -15,11 +15,10 @@ namespace prjThiTracNghiem.Models
             CauHois = new HashSet<CauHoi>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int GiaoVienID { get; set; }
 
         [StringLength(50)]
-        public string TenGiaoVien { get; set; }
+        public string HoTen { get; set; }
 
         [StringLength(50)]
         public string SDT { get; set; }

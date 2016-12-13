@@ -15,7 +15,6 @@ namespace prjThiTracNghiem.Models
             BaiThis = new HashSet<BaiThi>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int DapAnCauHoiID { get; set; }
 
         public string NoiDungDapAn { get; set; }

@@ -13,10 +13,9 @@ namespace prjThiTracNghiem.Models
         public DeThi()
         {
             BaiThis = new HashSet<BaiThi>();
-            CauHoiThis = new HashSet<CauHoiThi>();
+            CauHois = new HashSet<CauHoi>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int DeThiID { get; set; }
 
         [StringLength(10)]
@@ -30,14 +29,17 @@ namespace prjThiTracNghiem.Models
 
         public bool? HienThi { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BaiThi> BaiThis { get; set; }
+        [StringLength(100)]
+        public string TenDeThi { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CauHoiThi> CauHoiThis { get; set; }
+        public virtual ICollection<BaiThi> BaiThis { get; set; }
 
         public virtual DotThi DotThi { get; set; }
 
         public virtual HocPhan HocPhan { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CauHoi> CauHois { get; set; }
     }
 }

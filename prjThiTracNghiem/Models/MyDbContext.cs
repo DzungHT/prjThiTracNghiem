@@ -14,7 +14,7 @@ namespace prjThiTracNghiem.Models
 
         public virtual DbSet<BaiThi> BaiThis { get; set; }
         public virtual DbSet<CauHoi> CauHois { get; set; }
-        public virtual DbSet<CauHoiThi> CauHoiThis { get; set; }
+        public virtual DbSet<CauHoiBaiThi> CauHoiBaiThis { get; set; }
         public virtual DbSet<Chuong> Chuongs { get; set; }
         public virtual DbSet<DapAnCauHoi> DapAnCauHois { get; set; }
         public virtual DbSet<DeThi> DeThis { get; set; }
@@ -32,14 +32,24 @@ namespace prjThiTracNghiem.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<BaiThi>()
+                .HasMany(e => e.CauHoiBaiThis)
+                .WithRequired(e => e.BaiThi)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<BaiThi>()
                 .HasMany(e => e.DapAnCauHois)
                 .WithMany(e => e.BaiThis)
                 .Map(m => m.ToTable("TraLoiBaiThi").MapLeftKey("BaiThiID").MapRightKey("DapAnCauHoiID"));
 
             modelBuilder.Entity<CauHoi>()
-                .HasMany(e => e.CauHoiThis)
+                .HasMany(e => e.CauHoiBaiThis)
                 .WithRequired(e => e.CauHoi)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<CauHoi>()
+                .HasMany(e => e.DeThis)
+                .WithMany(e => e.CauHois)
+                .Map(m => m.ToTable("CauHoiDeThi").MapLeftKey("CauhoiID").MapRightKey("DeThiID"));
 
             modelBuilder.Entity<Chuong>()
                 .Property(e => e.TenChuong)
@@ -48,11 +58,6 @@ namespace prjThiTracNghiem.Models
             modelBuilder.Entity<DeThi>()
                 .Property(e => e.MaDeThi)
                 .IsFixedLength();
-
-            modelBuilder.Entity<DeThi>()
-                .HasMany(e => e.CauHoiThis)
-                .WithRequired(e => e.DeThi)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<GiaoVien>()
                 .Property(e => e.SDT)
@@ -83,8 +88,9 @@ namespace prjThiTracNghiem.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<TaiKhoan>()
-                .HasOptional(e => e.GiaoVien)
-                .WithRequired(e => e.TaiKhoan);
+                .HasMany(e => e.GiaoViens)
+                .WithRequired(e => e.TaiKhoan)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<TaiKhoan>()
                 .HasMany(e => e.SinhViens)

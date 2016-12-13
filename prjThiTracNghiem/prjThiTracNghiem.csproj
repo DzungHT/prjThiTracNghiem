@@ -59,7 +59,7 @@
   <ItemGroup>
     <Compile Include="Models\BaiThi.cs" />
     <Compile Include="Models\CauHoi.cs" />
-    <Compile Include="Models\CauHoiThi.cs" />
+    <Compile Include="Models\CauHoiBaiThi.cs" />
     <Compile Include="Models\Chuong.cs" />
     <Compile Include="Models\DapAnCauHoi.cs" />
     <Compile Include="Models\DeThi.cs" />
