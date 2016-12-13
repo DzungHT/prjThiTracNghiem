@@ -29,16 +29,34 @@ namespace prjThiTracNghiem.Views
         {
             đăngXuấtToolStripMenuItem.Visible = true;
             đăngNhậpToolStripMenuItem.Visible = false;
-
-            if(sender.GetType() is GiaoVien)
+            TaiKhoan taikhoan;
+            if(sender.GetType().Name.Equals("GiaoVien"))
             {
-
+                // Giao diện của backend
+                MessageBox.Show("GiaoVien");
+                var obj = sender as GiaoVien;
+                taikhoan = obj.TaiKhoan;
+                tenNguoiDungToolStripStatusLabel.Text = obj.TenGiaoVien;
             }
+            else
+            {
+                // Giao diện frontend
+                MessageBox.Show("SinhVien");
+                var obj = sender as SinhVien;
+                taikhoan = obj.TaiKhoan;
+                tenNguoiDungToolStripStatusLabel.Text = obj.HoTen;
+            }
+
+            tenTaiKhoanToolStripStatusLabel.Text = taikhoan.Username;
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            var res = MessageBox.Show("Thoát chương trình?", "Xác nhận thoát chương trình", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(res == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
