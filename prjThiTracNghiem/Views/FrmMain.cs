@@ -1,4 +1,5 @@
 ﻿using prjThiTracNghiem.Models;
+using prjThiTracNghiem.Views.BackEnd;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,9 @@ namespace prjThiTracNghiem.Views
         public FrmMain()
         {
             InitializeComponent();
+            var uc = new _QLNguoidung();
+            pnlMain.Controls.Add(uc);
+            uc.Dock = DockStyle.Fill;
         }
 
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
