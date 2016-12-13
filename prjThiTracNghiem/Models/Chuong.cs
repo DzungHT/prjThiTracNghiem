@@ -15,7 +15,6 @@ namespace prjThiTracNghiem.Models
             CauHois = new HashSet<CauHoi>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ChuongID { get; set; }
 
         [StringLength(100)]

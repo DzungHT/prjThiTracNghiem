@@ -12,10 +12,10 @@ namespace prjThiTracNghiem.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public BaiThi()
         {
+            CauHoiBaiThis = new HashSet<CauHoiBaiThi>();
             DapAnCauHois = new HashSet<DapAnCauHoi>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int BaiThiID { get; set; }
 
         public int? DethiID { get; set; }
@@ -25,9 +25,14 @@ namespace prjThiTracNghiem.Models
         [StringLength(14)]
         public string NgayLamBai { get; set; }
 
+        public float? Diem { get; set; }
+
         public virtual DeThi DeThi { get; set; }
 
         public virtual SinhVien SinhVien { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CauHoiBaiThi> CauHoiBaiThis { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DapAnCauHoi> DapAnCauHois { get; set; }
