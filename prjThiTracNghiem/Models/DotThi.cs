@@ -15,7 +15,6 @@ namespace prjThiTracNghiem.Models
             DeThis = new HashSet<DeThi>();
         }
 
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int DotThiID { get; set; }
 
         [StringLength(100)]

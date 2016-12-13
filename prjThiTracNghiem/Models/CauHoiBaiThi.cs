@@ -6,23 +6,23 @@ namespace prjThiTracNghiem.Models
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("CauHoiThi")]
-    public partial class CauHoiThi
+    [Table("CauHoiBaiThi")]
+    public partial class CauHoiBaiThi
     {
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int DeThiID { get; set; }
+        public int BaiThiID { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int CauhoiID { get; set; }
+        public int CauHoiID { get; set; }
 
         public int? ThuTu { get; set; }
 
-        public virtual CauHoi CauHoi { get; set; }
+        public virtual BaiThi BaiThi { get; set; }
 
-        public virtual DeThi DeThi { get; set; }
+        public virtual CauHoi CauHoi { get; set; }
     }
 }
