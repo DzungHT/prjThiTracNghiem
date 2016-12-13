@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prjThiTracNghiem.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,24 @@ namespace prjThiTracNghiem.Views
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmLogin frm = new FrmLogin();
+            frm.CallBack += Login_CallBack;
             frm.ShowDialog();
+        }
+
+        private void Login_CallBack(object sender, EventArgs e)
+        {
+            đăngXuấtToolStripMenuItem.Visible = true;
+            đăngNhậpToolStripMenuItem.Visible = false;
+
+            if(sender.GetType() is GiaoVien)
+            {
+
+            }
+        }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
