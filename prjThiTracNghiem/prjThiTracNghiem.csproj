@@ -72,6 +72,36 @@
     <Compile Include="Models\TaiKhoan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\BackEnd\_FormCauhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\_FormCauhoi.Designer.cs">
+      <DependentUpon>_FormCauhoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BackEnd\_FormChuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\_FormChuong.Designer.cs">
+      <DependentUpon>_FormChuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BackEnd\_FormHocphan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\_FormHocphan.Designer.cs">
+      <DependentUpon>_FormHocphan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BackEnd\_FormTimkiemCauhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\_FormTimkiemCauhoi.Designer.cs">
+      <DependentUpon>_FormTimkiemCauhoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BackEnd\_QLCauhoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\_QLCauhoi.Designer.cs">
+      <DependentUpon>_QLCauhoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +123,21 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\BackEnd\_FormCauhoi.resx">
+      <DependentUpon>_FormCauhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BackEnd\_FormChuong.resx">
+      <DependentUpon>_FormChuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BackEnd\_FormHocphan.resx">
+      <DependentUpon>_FormHocphan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BackEnd\_FormTimkiemCauhoi.resx">
+      <DependentUpon>_FormTimkiemCauhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BackEnd\_QLCauhoi.resx">
+      <DependentUpon>_QLCauhoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,8 +162,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
-    <Folder Include="Views\BackEnd\" />
     <Folder Include="Views\FrontEnd\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\question-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
