@@ -16,12 +16,32 @@ namespace prjThiTracNghiem.Views
         {
             InitializeComponent();
         }
-       
-
+        
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("ABC");
-            this.Controls[]
+
+        }
+
+        #region MyMethods
+
+        private void ValidateLogin()
+        {
+            if (string.IsNullOrEmpty(txtUsername.Text.Trim()))
+            {
+                txtUsername.Focus();
+            }
+        }
+
+        #endregion
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
