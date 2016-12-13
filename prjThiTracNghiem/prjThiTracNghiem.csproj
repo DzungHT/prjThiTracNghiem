@@ -120,6 +120,12 @@
     <Compile Include="Views\BackEnd\_QLCauhoi.Designer.cs">
       <DependentUpon>_QLCauhoi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\BackEnd\_QLDethi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\_QLDethi.Designer.cs">
+      <DependentUpon>_QLDethi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\BackEnd\_QLNguoidung.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\BackEnd\_QLCauhoi.resx">
       <DependentUpon>_QLCauhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BackEnd\_QLDethi.resx">
+      <DependentUpon>_QLDethi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\BackEnd\_QLNguoidung.resx">
       <DependentUpon>_QLNguoidung.cs</DependentUpon>
