@@ -22,8 +22,7 @@ namespace prjThiTracNghiem.Models
 
         public int? SinhVienID { get; set; }
 
-        [StringLength(14)]
-        public string NgayLamBai { get; set; }
+        public DateTime? NgayLamBai { get; set; }
 
         public float? Diem { get; set; }
 

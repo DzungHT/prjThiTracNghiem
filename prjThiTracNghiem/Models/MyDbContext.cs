@@ -28,10 +28,6 @@ namespace prjThiTracNghiem.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<BaiThi>()
-                .Property(e => e.NgayLamBai)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<BaiThi>()
                 .HasMany(e => e.CauHoiBaiThis)
                 .WithRequired(e => e.BaiThi)
                 .WillCascadeOnDelete(false);
@@ -51,20 +47,12 @@ namespace prjThiTracNghiem.Models
                 .WithMany(e => e.CauHois)
                 .Map(m => m.ToTable("CauHoiDeThi").MapLeftKey("CauhoiID").MapRightKey("DeThiID"));
 
-            modelBuilder.Entity<Chuong>()
-                .Property(e => e.TenChuong)
-                .IsUnicode(false);
-
             modelBuilder.Entity<DeThi>()
                 .Property(e => e.MaDeThi)
                 .IsFixedLength();
 
             modelBuilder.Entity<GiaoVien>()
                 .Property(e => e.SDT)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<HocPhan>()
-                .Property(e => e.TenHocPhan)
                 .IsUnicode(false);
 
             modelBuilder.Entity<SinhVien>()

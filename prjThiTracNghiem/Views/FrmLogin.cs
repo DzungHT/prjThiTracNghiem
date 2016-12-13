@@ -1,7 +1,9 @@
-﻿using System;
+﻿using prjThiTracNghiem.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,9 +24,11 @@ namespace prjThiTracNghiem.Views
         {
             MessageBox.Show(mess, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        private bool Login(string username, string password)
+        private bool Login(string username, string password, out INguoiDung nguoidung)
         {
-            return false;
+            MyDbContext db = new MyDbContext();
+            var taikhoan = db.TaiKhoans.Where(x => x.Username == username && x.Password == password).Exclude();
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

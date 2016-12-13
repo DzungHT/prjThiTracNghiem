@@ -67,6 +67,7 @@
     <Compile Include="Models\DotThi.cs" />
     <Compile Include="Models\GiaoVien.cs" />
     <Compile Include="Models\HocPhan.cs" />
+    <Compile Include="Models\INguoiDung.cs" />
     <Compile Include="Models\MyDbContext.cs" />
     <Compile Include="Models\SinhVien.cs" />
     <Compile Include="Models\TaiKhoan.cs" />
