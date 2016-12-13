@@ -117,7 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
-    <Folder Include="Views\BackEnd\" />
+	<Folder Include="Views\BackEnd\" />
     <Folder Include="Views\FrontEnd\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
