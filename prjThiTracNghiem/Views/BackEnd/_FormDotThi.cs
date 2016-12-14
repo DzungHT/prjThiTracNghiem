@@ -16,7 +16,7 @@ namespace prjThiTracNghiem.Views.BackEnd
         public event EventHandler CallBack;
         MyDbContext db2 = new MyDbContext();
         DotThi dotThi;
-        int status;
+        int status;    
         public _FormDotThi()
         {
             InitializeComponent();
