@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lvChuong = new System.Windows.Forms.ListView();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CauHoi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvDeThi = new System.Windows.Forms.ListView();
+            this.colCauHoiID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNoiDung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.txtDotThi = new System.Windows.Forms.TextBox();
+            this.txtTenHocPhan = new System.Windows.Forms.TextBox();
             this.lblNumDeThi = new System.Windows.Forms.Label();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
@@ -46,14 +54,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTenHocPhan = new System.Windows.Forms.TextBox();
-            this.txtDotThi = new System.Windows.Forms.TextBox();
-            this.lvDeThi = new System.Windows.Forms.ListView();
-            this.lvChuong = new System.Windows.Forms.ListView();
-            this.colCauHoiID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colNoiDung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CauHoi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,6 +87,72 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(690, 491);
             this.panel1.TabIndex = 0;
+            // 
+            // lvChuong
+            // 
+            this.lvChuong.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.CauHoi});
+            this.lvChuong.FullRowSelect = true;
+            this.lvChuong.Location = new System.Drawing.Point(49, 230);
+            this.lvChuong.MultiSelect = false;
+            this.lvChuong.Name = "lvChuong";
+            this.lvChuong.Size = new System.Drawing.Size(260, 217);
+            this.lvChuong.TabIndex = 11;
+            this.lvChuong.UseCompatibleStateImageBehavior = false;
+            this.lvChuong.View = System.Windows.Forms.View.Details;
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            this.ID.Width = 69;
+            // 
+            // CauHoi
+            // 
+            this.CauHoi.Text = "Câu hỏi";
+            this.CauHoi.Width = 186;
+            // 
+            // lvDeThi
+            // 
+            this.lvDeThi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colCauHoiID,
+            this.colNoiDung});
+            this.lvDeThi.FullRowSelect = true;
+            this.lvDeThi.Location = new System.Drawing.Point(406, 230);
+            this.lvDeThi.MultiSelect = false;
+            this.lvDeThi.Name = "lvDeThi";
+            this.lvDeThi.Size = new System.Drawing.Size(247, 217);
+            this.lvDeThi.TabIndex = 10;
+            this.lvDeThi.UseCompatibleStateImageBehavior = false;
+            this.lvDeThi.View = System.Windows.Forms.View.Details;
+            // 
+            // colCauHoiID
+            // 
+            this.colCauHoiID.Text = "ID";
+            this.colCauHoiID.Width = 57;
+            // 
+            // colNoiDung
+            // 
+            this.colNoiDung.Text = "Câu hỏi";
+            this.colNoiDung.Width = 182;
+            // 
+            // txtDotThi
+            // 
+            this.txtDotThi.Enabled = false;
+            this.txtDotThi.Location = new System.Drawing.Point(241, 55);
+            this.txtDotThi.Name = "txtDotThi";
+            this.txtDotThi.ReadOnly = true;
+            this.txtDotThi.Size = new System.Drawing.Size(425, 20);
+            this.txtDotThi.TabIndex = 9;
+            // 
+            // txtTenHocPhan
+            // 
+            this.txtTenHocPhan.Enabled = false;
+            this.txtTenHocPhan.Location = new System.Drawing.Point(241, 27);
+            this.txtTenHocPhan.Name = "txtTenHocPhan";
+            this.txtTenHocPhan.ReadOnly = true;
+            this.txtTenHocPhan.Size = new System.Drawing.Size(425, 20);
+            this.txtTenHocPhan.TabIndex = 8;
             // 
             // lblNumDeThi
             // 
@@ -251,72 +317,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên học phần :";
             // 
-            // txtTenHocPhan
-            // 
-            this.txtTenHocPhan.Enabled = false;
-            this.txtTenHocPhan.Location = new System.Drawing.Point(241, 27);
-            this.txtTenHocPhan.Name = "txtTenHocPhan";
-            this.txtTenHocPhan.ReadOnly = true;
-            this.txtTenHocPhan.Size = new System.Drawing.Size(425, 20);
-            this.txtTenHocPhan.TabIndex = 8;
-            // 
-            // txtDotThi
-            // 
-            this.txtDotThi.Enabled = false;
-            this.txtDotThi.Location = new System.Drawing.Point(241, 55);
-            this.txtDotThi.Name = "txtDotThi";
-            this.txtDotThi.ReadOnly = true;
-            this.txtDotThi.Size = new System.Drawing.Size(425, 20);
-            this.txtDotThi.TabIndex = 9;
-            // 
-            // lvDeThi
-            // 
-            this.lvDeThi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.colCauHoiID,
-            this.colNoiDung});
-            this.lvDeThi.FullRowSelect = true;
-            this.lvDeThi.Location = new System.Drawing.Point(406, 230);
-            this.lvDeThi.MultiSelect = false;
-            this.lvDeThi.Name = "lvDeThi";
-            this.lvDeThi.Size = new System.Drawing.Size(247, 217);
-            this.lvDeThi.TabIndex = 10;
-            this.lvDeThi.UseCompatibleStateImageBehavior = false;
-            this.lvDeThi.View = System.Windows.Forms.View.Details;
-            // 
-            // lvChuong
-            // 
-            this.lvChuong.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ID,
-            this.CauHoi});
-            this.lvChuong.FullRowSelect = true;
-            this.lvChuong.Location = new System.Drawing.Point(49, 230);
-            this.lvChuong.MultiSelect = false;
-            this.lvChuong.Name = "lvChuong";
-            this.lvChuong.Size = new System.Drawing.Size(260, 217);
-            this.lvChuong.TabIndex = 11;
-            this.lvChuong.UseCompatibleStateImageBehavior = false;
-            this.lvChuong.View = System.Windows.Forms.View.Details;
-            // 
-            // colCauHoiID
-            // 
-            this.colCauHoiID.Text = "ID";
-            this.colCauHoiID.Width = 57;
-            // 
-            // colNoiDung
-            // 
-            this.colNoiDung.Text = "Câu hỏi";
-            this.colNoiDung.Width = 182;
-            // 
-            // ID
-            // 
-            this.ID.Text = "ID";
-            this.ID.Width = 69;
-            // 
-            // CauHoi
-            // 
-            this.CauHoi.Text = "Câu hỏi";
-            this.CauHoi.Width = 186;
-            // 
             // _FormDethi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,6 +324,7 @@
             this.ClientSize = new System.Drawing.Size(714, 515);
             this.Controls.Add(this.panel1);
             this.Name = "_FormDethi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin đề thi";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

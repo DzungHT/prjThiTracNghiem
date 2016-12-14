@@ -156,6 +156,7 @@
             this.ClientSize = new System.Drawing.Size(755, 187);
             this.Controls.Add(this.panel1);
             this.Name = "_FormDotThi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin đợt thi";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

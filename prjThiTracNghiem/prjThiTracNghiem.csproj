@@ -123,12 +123,6 @@
     <Compile Include="Views\BackEnd\_FormSinhvien.Designer.cs">
       <DependentUpon>_FormSinhvien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\BackEnd\_FormTimkiemCauhoi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\BackEnd\_FormTimkiemCauhoi.Designer.cs">
-      <DependentUpon>_FormTimkiemCauhoi.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\BackEnd\_QLCauhoi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -207,9 +201,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\BackEnd\_FormSinhvien.resx">
       <DependentUpon>_FormSinhvien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\BackEnd\_FormTimkiemCauhoi.resx">
-      <DependentUpon>_FormTimkiemCauhoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\BackEnd\_QLCauhoi.resx">
       <DependentUpon>_QLCauhoi.cs</DependentUpon>

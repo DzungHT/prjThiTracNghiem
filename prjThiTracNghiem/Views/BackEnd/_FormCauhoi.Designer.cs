@@ -319,6 +319,7 @@
             this.ClientSize = new System.Drawing.Size(798, 465);
             this.Controls.Add(this.panel1);
             this.Name = "_FormCauhoi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin câu hỏi";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -132,6 +132,7 @@
             this.ClientSize = new System.Drawing.Size(714, 154);
             this.Controls.Add(this.panel1);
             this.Name = "_FormChuong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin chương";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
