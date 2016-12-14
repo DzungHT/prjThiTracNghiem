@@ -30,16 +30,16 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblTongsocau = new System.Windows.Forms.Label();
+            this.lblDatraloi = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblCauhientai = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCauhoi = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.rad1 = new System.Windows.Forms.RadioButton();
             this.label11 = new System.Windows.Forms.Label();
@@ -47,20 +47,24 @@
             this.label12 = new System.Windows.Forms.Label();
             this.rad2 = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDA1 = new System.Windows.Forms.TextBox();
             this.rad3 = new System.Windows.Forms.RadioButton();
             this.check2 = new System.Windows.Forms.CheckBox();
             this.rad4 = new System.Windows.Forms.RadioButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtDA2 = new System.Windows.Forms.TextBox();
             this.check3 = new System.Windows.Forms.CheckBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtDA3 = new System.Windows.Forms.TextBox();
             this.check4 = new System.Windows.Forms.CheckBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtDA4 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnQuaylai = new System.Windows.Forms.Button();
+            this.btnQuaylai1 = new System.Windows.Forms.Button();
+            this.btnTiep = new System.Windows.Forms.Button();
+            this.btnTiep1 = new System.Windows.Forms.Button();
+            this.IDTraloi1 = new System.Windows.Forms.Label();
+            this.IDTraloi2 = new System.Windows.Forms.Label();
+            this.IDTraloi3 = new System.Windows.Forms.Label();
+            this.IDTraloi4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -70,8 +74,8 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lblTongsocau);
+            this.panel2.Controls.Add(this.lblDatraloi);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
@@ -90,31 +94,31 @@
             this.button1.Text = "Xem đáp án trả lời";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // lblTongsocau
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblTongsocau.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Location = new System.Drawing.Point(351, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 17);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "<số>";
+            this.lblTongsocau.AutoSize = true;
+            this.lblTongsocau.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongsocau.ForeColor = System.Drawing.Color.Red;
+            this.lblTongsocau.Location = new System.Drawing.Point(351, 12);
+            this.lblTongsocau.Name = "lblTongsocau";
+            this.lblTongsocau.Size = new System.Drawing.Size(43, 17);
+            this.lblTongsocau.TabIndex = 1;
+            this.lblTongsocau.Text = "<số>";
             // 
-            // label5
+            // lblDatraloi
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblDatraloi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(156, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 17);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "<số>";
+            this.lblDatraloi.AutoSize = true;
+            this.lblDatraloi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDatraloi.ForeColor = System.Drawing.Color.Red;
+            this.lblDatraloi.Location = new System.Drawing.Point(156, 12);
+            this.lblDatraloi.Name = "lblDatraloi";
+            this.lblDatraloi.Size = new System.Drawing.Size(43, 17);
+            this.lblDatraloi.TabIndex = 1;
+            this.lblDatraloi.Text = "<số>";
             // 
             // label4
             // 
@@ -152,18 +156,18 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Đã hoàn thành";
             // 
-            // label7
+            // lblCauhientai
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblCauhientai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(106, 45);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 17);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "<số>";
+            this.lblCauhientai.AutoSize = true;
+            this.lblCauhientai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCauhientai.ForeColor = System.Drawing.Color.Black;
+            this.lblCauhientai.Location = new System.Drawing.Point(106, 45);
+            this.lblCauhientai.Name = "lblCauhientai";
+            this.lblCauhientai.Size = new System.Drawing.Size(43, 17);
+            this.lblCauhientai.TabIndex = 1;
+            this.lblCauhientai.Text = "<số>";
             // 
             // label8
             // 
@@ -202,16 +206,16 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Đáp án :";
             // 
-            // textBox1
+            // txtCauhoi
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtCauhoi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(32, 73);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(719, 123);
-            this.textBox1.TabIndex = 2;
+            this.txtCauhoi.Location = new System.Drawing.Point(32, 73);
+            this.txtCauhoi.Multiline = true;
+            this.txtCauhoi.Name = "txtCauhoi";
+            this.txtCauhoi.ReadOnly = true;
+            this.txtCauhoi.Size = new System.Drawing.Size(719, 123);
+            this.txtCauhoi.TabIndex = 2;
             // 
             // label10
             // 
@@ -256,6 +260,7 @@
             this.check1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.check1.AutoSize = true;
+            this.check1.Enabled = false;
             this.check1.Location = new System.Drawing.Point(140, 260);
             this.check1.Name = "check1";
             this.check1.Size = new System.Drawing.Size(15, 14);
@@ -300,16 +305,16 @@
             this.label13.TabIndex = 3;
             this.label13.Text = "D";
             // 
-            // textBox2
+            // txtDA1
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtDA1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(154, 244);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(594, 55);
-            this.textBox2.TabIndex = 6;
+            this.txtDA1.Location = new System.Drawing.Point(154, 244);
+            this.txtDA1.Multiline = true;
+            this.txtDA1.Name = "txtDA1";
+            this.txtDA1.ReadOnly = true;
+            this.txtDA1.Size = new System.Drawing.Size(594, 55);
+            this.txtDA1.TabIndex = 6;
             // 
             // rad3
             // 
@@ -328,6 +333,7 @@
             this.check2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.check2.AutoSize = true;
+            this.check2.Enabled = false;
             this.check2.Location = new System.Drawing.Point(140, 321);
             this.check2.Name = "check2";
             this.check2.Size = new System.Drawing.Size(15, 14);
@@ -346,60 +352,62 @@
             this.rad4.TabStop = true;
             this.rad4.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtDA2
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtDA2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Location = new System.Drawing.Point(154, 305);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(594, 55);
-            this.textBox3.TabIndex = 6;
+            this.txtDA2.Location = new System.Drawing.Point(154, 305);
+            this.txtDA2.Multiline = true;
+            this.txtDA2.Name = "txtDA2";
+            this.txtDA2.ReadOnly = true;
+            this.txtDA2.Size = new System.Drawing.Size(594, 55);
+            this.txtDA2.TabIndex = 6;
             // 
             // check3
             // 
             this.check3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.check3.AutoSize = true;
+            this.check3.Enabled = false;
             this.check3.Location = new System.Drawing.Point(140, 382);
             this.check3.Name = "check3";
             this.check3.Size = new System.Drawing.Size(15, 14);
             this.check3.TabIndex = 5;
             this.check3.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // txtDA3
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtDA3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(154, 366);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(594, 55);
-            this.textBox4.TabIndex = 6;
+            this.txtDA3.Location = new System.Drawing.Point(154, 366);
+            this.txtDA3.Multiline = true;
+            this.txtDA3.Name = "txtDA3";
+            this.txtDA3.ReadOnly = true;
+            this.txtDA3.Size = new System.Drawing.Size(594, 55);
+            this.txtDA3.TabIndex = 6;
             // 
             // check4
             // 
             this.check4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.check4.AutoSize = true;
+            this.check4.Enabled = false;
             this.check4.Location = new System.Drawing.Point(140, 443);
             this.check4.Name = "check4";
             this.check4.Size = new System.Drawing.Size(15, 14);
             this.check4.TabIndex = 5;
             this.check4.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // txtDA4
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtDA4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(154, 427);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(594, 55);
-            this.textBox5.TabIndex = 6;
+            this.txtDA4.Location = new System.Drawing.Point(154, 427);
+            this.txtDA4.Multiline = true;
+            this.txtDA4.Name = "txtDA4";
+            this.txtDA4.ReadOnly = true;
+            this.txtDA4.Size = new System.Drawing.Size(594, 55);
+            this.txtDA4.TabIndex = 6;
             // 
             // panel1
             // 
@@ -407,19 +415,23 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.IDTraloi4);
+            this.panel1.Controls.Add(this.IDTraloi3);
+            this.panel1.Controls.Add(this.IDTraloi2);
+            this.panel1.Controls.Add(this.IDTraloi1);
+            this.panel1.Controls.Add(this.btnQuaylai);
+            this.panel1.Controls.Add(this.btnQuaylai1);
+            this.panel1.Controls.Add(this.txtDA4);
+            this.panel1.Controls.Add(this.btnTiep);
+            this.panel1.Controls.Add(this.btnTiep1);
             this.panel1.Controls.Add(this.check4);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtDA3);
             this.panel1.Controls.Add(this.check3);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtDA2);
             this.panel1.Controls.Add(this.rad4);
             this.panel1.Controls.Add(this.check2);
             this.panel1.Controls.Add(this.rad3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtDA1);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.rad2);
             this.panel1.Controls.Add(this.label12);
@@ -427,55 +439,99 @@
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.rad1);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtCauhoi);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.lblCauhientai);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(788, 544);
             this.panel1.TabIndex = 0;
             // 
-            // button5
+            // btnQuaylai
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button5.Location = new System.Drawing.Point(334, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 24);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "<< Quay lại";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnQuaylai.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnQuaylai.Location = new System.Drawing.Point(334, 3);
+            this.btnQuaylai.Name = "btnQuaylai";
+            this.btnQuaylai.Size = new System.Drawing.Size(75, 24);
+            this.btnQuaylai.TabIndex = 8;
+            this.btnQuaylai.Text = "<< Quay lại";
+            this.btnQuaylai.UseVisualStyleBackColor = true;
+            this.btnQuaylai.Click += new System.EventHandler(this.btnQuaylai_Click);
             // 
-            // button3
+            // btnQuaylai1
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button3.Location = new System.Drawing.Point(334, 488);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 24);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "<< Quay lại";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnQuaylai1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnQuaylai1.Location = new System.Drawing.Point(334, 488);
+            this.btnQuaylai1.Name = "btnQuaylai1";
+            this.btnQuaylai1.Size = new System.Drawing.Size(75, 24);
+            this.btnQuaylai1.TabIndex = 8;
+            this.btnQuaylai1.Text = "<< Quay lại";
+            this.btnQuaylai1.UseVisualStyleBackColor = true;
+            this.btnQuaylai1.Click += new System.EventHandler(this.btnQuaylai1_Click);
             // 
-            // button4
+            // btnTiep
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button4.Location = new System.Drawing.Point(433, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 24);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Tiếp >>";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnTiep.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnTiep.Location = new System.Drawing.Point(433, 3);
+            this.btnTiep.Name = "btnTiep";
+            this.btnTiep.Size = new System.Drawing.Size(75, 24);
+            this.btnTiep.TabIndex = 9;
+            this.btnTiep.Text = "Tiếp >>";
+            this.btnTiep.UseVisualStyleBackColor = true;
+            this.btnTiep.Click += new System.EventHandler(this.btnTiep_Click);
             // 
-            // button2
+            // btnTiep1
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.Location = new System.Drawing.Point(433, 488);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 24);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Tiếp >>";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnTiep1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnTiep1.Location = new System.Drawing.Point(433, 488);
+            this.btnTiep1.Name = "btnTiep1";
+            this.btnTiep1.Size = new System.Drawing.Size(75, 24);
+            this.btnTiep1.TabIndex = 9;
+            this.btnTiep1.Text = "Tiếp >>";
+            this.btnTiep1.UseVisualStyleBackColor = true;
+            this.btnTiep1.Click += new System.EventHandler(this.btnTiep1_Click);
+            // 
+            // IDTraloi1
+            // 
+            this.IDTraloi1.AutoSize = true;
+            this.IDTraloi1.Location = new System.Drawing.Point(32, 251);
+            this.IDTraloi1.Name = "IDTraloi1";
+            this.IDTraloi1.Size = new System.Drawing.Size(35, 13);
+            this.IDTraloi1.TabIndex = 11;
+            this.IDTraloi1.Text = "label6";
+            this.IDTraloi1.Visible = false;
+            // 
+            // IDTraloi2
+            // 
+            this.IDTraloi2.AutoSize = true;
+            this.IDTraloi2.Location = new System.Drawing.Point(32, 286);
+            this.IDTraloi2.Name = "IDTraloi2";
+            this.IDTraloi2.Size = new System.Drawing.Size(35, 13);
+            this.IDTraloi2.TabIndex = 11;
+            this.IDTraloi2.Text = "label6";
+            this.IDTraloi2.Visible = false;
+            // 
+            // IDTraloi3
+            // 
+            this.IDTraloi3.AutoSize = true;
+            this.IDTraloi3.Location = new System.Drawing.Point(32, 321);
+            this.IDTraloi3.Name = "IDTraloi3";
+            this.IDTraloi3.Size = new System.Drawing.Size(35, 13);
+            this.IDTraloi3.TabIndex = 11;
+            this.IDTraloi3.Text = "label6";
+            this.IDTraloi3.Visible = false;
+            // 
+            // IDTraloi4
+            // 
+            this.IDTraloi4.AutoSize = true;
+            this.IDTraloi4.Location = new System.Drawing.Point(32, 347);
+            this.IDTraloi4.Name = "IDTraloi4";
+            this.IDTraloi4.Size = new System.Drawing.Size(35, 13);
+            this.IDTraloi4.TabIndex = 11;
+            this.IDTraloi4.Text = "label6";
+            this.IDTraloi4.Visible = false;
             // 
             // _Cauhoi
             // 
@@ -495,17 +551,17 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblDatraloi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblTongsocau;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblCauhientai;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCauhoi;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.RadioButton rad1;
         private System.Windows.Forms.Label label11;
@@ -513,19 +569,23 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.RadioButton rad2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDA1;
         private System.Windows.Forms.RadioButton rad3;
         private System.Windows.Forms.CheckBox check2;
         private System.Windows.Forms.RadioButton rad4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtDA2;
         private System.Windows.Forms.CheckBox check3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtDA3;
         private System.Windows.Forms.CheckBox check4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtDA4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnQuaylai1;
+        private System.Windows.Forms.Button btnTiep1;
+        private System.Windows.Forms.Button btnQuaylai;
+        private System.Windows.Forms.Button btnTiep;
+        private System.Windows.Forms.Label IDTraloi4;
+        private System.Windows.Forms.Label IDTraloi3;
+        private System.Windows.Forms.Label IDTraloi2;
+        private System.Windows.Forms.Label IDTraloi1;
     }
 }
