@@ -36,8 +36,6 @@
             this.cboChuong = new System.Windows.Forms.ComboBox();
             this.btnBo = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.lvDeThi = new System.Windows.Forms.ListBox();
-            this.lvChuong = new System.Windows.Forms.ListBox();
             this.txtThoiGian = new System.Windows.Forms.TextBox();
             this.txtMaDeThi = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -50,6 +48,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenHocPhan = new System.Windows.Forms.TextBox();
             this.txtDotThi = new System.Windows.Forms.TextBox();
+            this.lvDeThi = new System.Windows.Forms.ListView();
+            this.lvChuong = new System.Windows.Forms.ListView();
+            this.colCauHoiID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colNoiDung = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CauHoi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +62,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.lvChuong);
+            this.panel1.Controls.Add(this.lvDeThi);
             this.panel1.Controls.Add(this.txtDotThi);
             this.panel1.Controls.Add(this.txtTenHocPhan);
             this.panel1.Controls.Add(this.lblNumDeThi);
@@ -67,8 +73,6 @@
             this.panel1.Controls.Add(this.cboChuong);
             this.panel1.Controls.Add(this.btnBo);
             this.panel1.Controls.Add(this.btnThem);
-            this.panel1.Controls.Add(this.lvDeThi);
-            this.panel1.Controls.Add(this.lvChuong);
             this.panel1.Controls.Add(this.txtThoiGian);
             this.panel1.Controls.Add(this.txtMaDeThi);
             this.panel1.Controls.Add(this.label8);
@@ -146,22 +150,6 @@
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm >>";
             this.btnThem.UseVisualStyleBackColor = true;
-            // 
-            // lvDeThi
-            // 
-            this.lvDeThi.FormattingEnabled = true;
-            this.lvDeThi.Location = new System.Drawing.Point(406, 230);
-            this.lvDeThi.Name = "lvDeThi";
-            this.lvDeThi.Size = new System.Drawing.Size(260, 199);
-            this.lvDeThi.TabIndex = 3;
-            // 
-            // lvChuong
-            // 
-            this.lvChuong.FormattingEnabled = true;
-            this.lvChuong.Location = new System.Drawing.Point(49, 230);
-            this.lvChuong.Name = "lvChuong";
-            this.lvChuong.Size = new System.Drawing.Size(260, 199);
-            this.lvChuong.TabIndex = 3;
             // 
             // txtThoiGian
             // 
@@ -275,6 +263,50 @@
             this.txtDotThi.Size = new System.Drawing.Size(425, 20);
             this.txtDotThi.TabIndex = 9;
             // 
+            // lvDeThi
+            // 
+            this.lvDeThi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colCauHoiID,
+            this.colNoiDung});
+            this.lvDeThi.Location = new System.Drawing.Point(406, 230);
+            this.lvDeThi.Name = "lvDeThi";
+            this.lvDeThi.Size = new System.Drawing.Size(247, 217);
+            this.lvDeThi.TabIndex = 10;
+            this.lvDeThi.UseCompatibleStateImageBehavior = false;
+            this.lvDeThi.View = System.Windows.Forms.View.Details;
+            // 
+            // lvChuong
+            // 
+            this.lvChuong.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.CauHoi});
+            this.lvChuong.Location = new System.Drawing.Point(49, 230);
+            this.lvChuong.Name = "lvChuong";
+            this.lvChuong.Size = new System.Drawing.Size(260, 217);
+            this.lvChuong.TabIndex = 11;
+            this.lvChuong.UseCompatibleStateImageBehavior = false;
+            this.lvChuong.View = System.Windows.Forms.View.Details;
+            // 
+            // colCauHoiID
+            // 
+            this.colCauHoiID.Text = "ID";
+            this.colCauHoiID.Width = 57;
+            // 
+            // colNoiDung
+            // 
+            this.colNoiDung.Text = "Câu hỏi";
+            this.colNoiDung.Width = 182;
+            // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            this.ID.Width = 69;
+            // 
+            // CauHoi
+            // 
+            this.CauHoi.Text = "Câu hỏi";
+            this.CauHoi.Width = 186;
+            // 
             // _FormDethi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,8 +329,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnBo;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.ListBox lvDeThi;
-        private System.Windows.Forms.ListBox lvChuong;
         private System.Windows.Forms.TextBox txtThoiGian;
         private System.Windows.Forms.TextBox txtMaDeThi;
         private System.Windows.Forms.Label label5;
@@ -313,5 +343,11 @@
         private System.Windows.Forms.Label lblNumDeThi;
         private System.Windows.Forms.TextBox txtDotThi;
         private System.Windows.Forms.TextBox txtTenHocPhan;
+        private System.Windows.Forms.ListView lvChuong;
+        private System.Windows.Forms.ListView lvDeThi;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader CauHoi;
+        private System.Windows.Forms.ColumnHeader colCauHoiID;
+        private System.Windows.Forms.ColumnHeader colNoiDung;
     }
 }
