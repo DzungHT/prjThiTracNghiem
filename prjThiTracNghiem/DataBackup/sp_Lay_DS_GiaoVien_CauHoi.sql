@@ -1,5 +1,5 @@
-﻿IF EXISTS(SELECT name FROM sys.objects WHERE name = 'sp_Lay_DS_GiaoVien')
-	DROP PROC sp_Lay_DS_GiaoVien
+﻿IF EXISTS(SELECT name FROM sys.objects WHERE name = 'sp_Lay_DS_GiaoVien_CauHoi')
+	DROP PROC sp_Lay_DS_GiaoVien_CauHoi
 GO
 SET ANSI_NULLS ON
 GO
@@ -8,11 +8,10 @@ GO
 -- =============================================
 -- Author:		DzungHT
 -- Create date: 14th Dec, 2016
--- Description:	Lấy danh sách giáo viên
+-- Description:	Lấy danh sách câu hỏi của giáo viên
 -- =============================================
-CREATE PROCEDURE sp_Lay_DS_GiaoVien 
-	-- Add the parameters for the stored procedure here
-	@p_TextSearch nvarchar(500),
+CREATE PROCEDURE sp_Lay_DS_GiaoVien_CauHoi
+	@p_GiaoVienID int,
 	@p_pageNumber int,
 	@p_pageSize int
 AS
@@ -25,22 +24,23 @@ BEGIN
 		set @p_pageNumber = 1
 
 	SELECT 
-		gv.GiaoVienID as [ID],
-		gv.HoTen as [Họ tên giáo viên],
-		gv.SDT as [Số điện thoại],
-		tk.Username AS [Tên tài khoản]
+		ch.CauHoiID as [ID],
+		chg.TenChuong as [Tên chương],
+		hp.TenHocPhan as [Tên học phần],
+		dk.TenDoKho AS [Độ khó],
+		ch.NoiDung AS [Nội dung]
 	FROM 
-		GiaoVien gv
-	LEFT JOIN TaiKhoan tk ON tk.TaiKhoanID = gv.TaiKhoanID AND tk.Username LIKE @p_TextSearch
+		CauHoi ch
+	INNER JOIN GiaoVien gv ON gv.GiaoVienID = ch.GiaoVienID
+	LEFT JOIN Chuong chg ON chg.ChuongID = ch.ChuongID
+	LEFT JOIN HocPhan hp ON hp.HocPhanID = chg.HocPhanID
+	LEFT JOIN DoKho dk ON dk.DoKhoID = ch.DoKhoID
 	WHERE 
-		gv.HoTen LIKE @p_TextSearch OR
-		gv.SDT LIKE @p_TextSearch OR
-		CAST(gv.GiaoVienID as varchar(4)) Like @p_TextSearch
-	ORDER BY gv.GiaoVienID
+		gv.GiaoVienID = @p_GiaoVienID
+	ORDER BY ch.CauHoiID
 	OFFSET (@p_pageNumber -1) * @p_pageSize ROWS
 	FETCH NEXT @p_pageSize ROWS ONLY
 
 	SELECT @p_pageNumber AS [PageNumber], @p_pageSize as [PageSize], @PageCount as [PageCount]
-
 END
 GO

@@ -62,6 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\DbConfig.cs" />
+    <Compile Include="DataAccess\MSSQLServerDataAcess.cs" />
     <Compile Include="Models\BaiThi.cs" />
     <Compile Include="Models\CauHoi.cs" />
     <Compile Include="Models\CauHoiBaiThi.cs" />
