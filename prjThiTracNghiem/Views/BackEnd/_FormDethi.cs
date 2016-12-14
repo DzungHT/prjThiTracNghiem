@@ -36,7 +36,8 @@ namespace prjThiTracNghiem.Views.BackEnd
 
         private void Init()
         {
-            
+            comboBox1.Items.Clear();
+
         }
     }
 }
