@@ -172,8 +172,52 @@ namespace prjThiTracNghiem.Views.BackEnd
 
         private void btnGVThem_Click(object sender, EventArgs e)
         {
-            _FormGiaovien frm = new _FormGiaovien(null);
-            frm.ShowDialog();
+            _FormGiaovien frmGiaoVien = new _FormGiaovien(null);
+            frmGiaoVien.CallBack += FrmGiaoVien_CallBack;
+            frmGiaoVien.ShowDialog();
+        }
+
+        private void FrmGiaoVien_CallBack(object sender, EventArgs e)
+        {
+            LoadDSGiaoVien(string.IsNullOrEmpty(txtTextSearch_DSGiaoVien.Text) ? "%" : txtTextSearch_DSGiaoVien.Text, (int)numPageNumber_DSGiaoVien.Value, int.Parse(cboPageSize_DSGiaoVien.SelectedValue.ToString()));
+        }
+
+        private void btnGVXoa_Click(object sender, EventArgs e)
+        {
+            int ID = int.Parse(dgv_DSGiaovien.SelectedRows[0].Cells[0].Value.ToString());
+            if(ID == 1)
+            {
+                MessageBox.Show("Không thể xóa tài khoản Administrator!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                GiaoVien gv = dbc.GiaoViens.Where(x => x.GiaoVienID == ID).FirstOrDefault();
+                var resDlg = MessageBox.Show("Xóa giáo viên có:\nID: " + ID.ToString() + " \nTên giáo viên: " + gv.HoTen, "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (resDlg == DialogResult.Yes)
+                {
+                    var ds = DataAccess.Instance.ExecuteQuery("sp_Xoa_GiaoVien", CommandType.StoredProcedure, new SqlParameter("@GiaoVienID", gv.GiaoVienID), new SqlParameter("@TaiKhoanID", gv.TaiKhoanID));
+
+                    if (ds.Tables.Count == 0)
+                    {
+                        MessageBox.Show("Xóa thành công!", "Thông báo");
+                        LoadDSGiaoVien(string.IsNullOrEmpty(txtTextSearch_DSGiaoVien.Text) ? "%" : txtTextSearch_DSGiaoVien.Text, (int)numPageNumber_DSGiaoVien.Value, int.Parse(cboPageSize_DSGiaoVien.SelectedValue.ToString()));
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void btnGVSua_Click(object sender, EventArgs e)
+        {
+            int ID = int.Parse(dgv_DSGiaovien.SelectedRows[0].Cells[0].Value.ToString());
+            var gv = dbc.GiaoViens.Where(x => x.GiaoVienID == ID).FirstOrDefault();
+            _FormGiaovien frmGiaoVien = new _FormGiaovien(gv);
+            frmGiaoVien.CallBack += FrmGiaoVien_CallBack;
+            frmGiaoVien.ShowDialog();
         }
     }
 }

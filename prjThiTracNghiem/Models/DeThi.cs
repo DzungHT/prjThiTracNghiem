@@ -18,7 +18,7 @@ namespace prjThiTracNghiem.Models
 
         public int DeThiID { get; set; }
 
-        [StringLength(10)]
+        [StringLength(50)]
         public string MaDeThi { get; set; }
 
         public int? ThoiGian { get; set; }
