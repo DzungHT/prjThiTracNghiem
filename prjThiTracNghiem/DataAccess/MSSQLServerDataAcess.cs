@@ -47,16 +47,16 @@ namespace prjThiTracNghiem
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
 
                 da.Fill(result);
-                
+
                 connection.Close();
             }
             return result;
         }
-        public int ExcuteNonQuery(string commandText,CommandType commandType,params SqlParameter[] parameters)
+        public int ExcuteNonQuery(string commandText, CommandType commandType, params SqlParameter[] parameters)
         {
             try
             {
-                using(var cmd= new SqlCommand())
+                using (var cmd = new SqlCommand())
                 {
                     cmd.Connection = connection;
                     cmd.CommandText = commandText;
@@ -75,7 +75,7 @@ namespace prjThiTracNghiem
                 connection.Close();
             }
         }
-        public int InsertBaithi(int _DethiID,int _SinhvienID,string date)
+        public int InsertBaithi(int _DethiID, int _SinhvienID, string date)
         {
             try
             {
@@ -106,32 +106,74 @@ namespace prjThiTracNghiem
                 connection.Close();
             }
         }
-        public bool InsertCauhoiBaithi(List<CauHoi> lst,int id) 
+        public bool InsertCauhoiBaithi(List<CauHoi> lst, int id)
         {
+            connection.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_Cauhoibaithi_Insert";
+            cmd.Connection = connection;
+
+            SqlTransaction transaction;
+            transaction = connection.BeginTransaction();
+            cmd.Transaction = transaction;
             try
             {
-                using (var cmd = new SqlCommand())
+                for (int i = 0; i < lst.Count; i++)
                 {
-                    SqlTransaction tran = connection.BeginTransaction();
-                    connection.Open();
-                    cmd.Connection = connection;
-                    cmd.CommandText = "sp_Cauhoibaithi_Insert";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Transaction = tran;
-                    for(int i = 0; i < lst.Count; i++)
-                    {
-                        cmd.Parameters.Add(new SqlParameter("@BaithiID", id));
-                        cmd.Parameters.Add(new SqlParameter("@CauhoiID", lst[i].CauHoiID));
-                        cmd.Parameters.Add(new SqlParameter("@Thutu", i+1));
-                        cmd.ExecuteNonQuery();
-                    }
-                    tran.Commit();
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.Add(new SqlParameter("@BaithiID", id));
+                    cmd.Parameters.Add(new SqlParameter("@CauhoiID", lst[i].CauHoiID));
+                    cmd.Parameters.Add(new SqlParameter("@Thutu", i + 1));
+                    cmd.ExecuteNonQuery();
                 }
+                transaction.Commit();
                 return true;
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
+                transaction.Rollback();
                 return false;
+            }
+            finally
+            {
+
+                connection.Close();
+            }
+
+        }
+        public bool InsertTraloiBaithi(List<int> lst, int id)
+        {
+            connection.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "sp_Traloibaithi_Insert";
+            cmd.Connection = connection;
+
+            SqlTransaction transaction;
+            transaction = connection.BeginTransaction();
+            cmd.Transaction = transaction;
+            try
+            {
+                for (int i = 0; i < lst.Count; i++)
+                {
+                    cmd.Parameters.Clear();
+                    cmd.Parameters.Add(new SqlParameter("@BTid", id));
+                    cmd.Parameters.Add(new SqlParameter("@DAid", lst[i]));
+                    cmd.ExecuteNonQuery();
+                }
+                transaction.Commit();
+                return true;
+            }
+            catch (System.Exception ex)
+            {
+                transaction.Rollback();
+                return false;
+            }
+            finally
+            {
+
+                connection.Close();
             }
         }
         #endregion

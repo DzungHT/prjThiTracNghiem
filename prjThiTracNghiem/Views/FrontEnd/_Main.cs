@@ -14,7 +14,7 @@ namespace prjThiTracNghiem.Views.FrontEnd
 {
     public partial class _Main : UserControl
     {
-
+        int btid;
         DeThi _Dethi;
         SinhVien _objSinhvien;
         List<CauHoi> _lstCauhoi;
@@ -22,6 +22,7 @@ namespace prjThiTracNghiem.Views.FrontEnd
         #region Biến hỗ trợ
         private int phut;
         TimeSpan ts;
+        _Cauhoi ucCauhoi;
         #endregion
 
 
@@ -64,7 +65,7 @@ namespace prjThiTracNghiem.Views.FrontEnd
             ts = new TimeSpan(0, phut, 0);
             Time.Start();
             ////
-            var ucCauhoi = new _Cauhoi();
+            ucCauhoi = new _Cauhoi();
             PanelContent.Controls.Clear();
             PanelContent.Controls.Add(ucCauhoi);
             ucCauhoi.Dock = DockStyle.Fill;
@@ -91,6 +92,7 @@ namespace prjThiTracNghiem.Views.FrontEnd
         {
             _lstCauhoi = Thaydoithutucauhoi();
             int idbt = DataAccess.Instance.InsertBaithi(_Dethi.DeThiID, _objSinhvien.SinhVienID, DateTime.Now.ToShortDateString());
+            btid = idbt;
             DataAccess.Instance.InsertCauhoiBaithi(_lstCauhoi, idbt);
         }
         #endregion
@@ -123,7 +125,13 @@ namespace prjThiTracNghiem.Views.FrontEnd
             DialogResult dr = MessageBox.Show("Xác nhận kết thúc bài thi!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
-
+                DataAccess.Instance.InsertTraloiBaithi(ucCauhoi.lstTraloi, btid);
+                var ucDethi = new _Dethi();
+                ucDethi.BindData();
+                PanelContent.Controls.Clear();
+                PanelContent.Controls.Add(ucDethi);
+                ucDethi.Dock = DockStyle.Fill;
+                this.setThongtinbaithi(false);
             }
         }
     }
