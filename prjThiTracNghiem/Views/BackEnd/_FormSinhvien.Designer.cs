@@ -303,6 +303,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "_FormSinhvien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin sinh viên";
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
