@@ -20,7 +20,8 @@ namespace prjThiTracNghiem.Models
         [StringLength(50)]
         public string HoTen { get; set; }
 
-        public DateTime NgaySinh { get; set; }
+        [StringLength(50)]
+        public string NgaySinh { get; set; }
 
         [StringLength(150)]
         public string DiaChi { get; set; }
