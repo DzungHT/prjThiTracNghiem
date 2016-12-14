@@ -106,6 +106,7 @@
             this.btnHuy.TabIndex = 1;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLamMoi
             // 
@@ -115,6 +116,7 @@
             this.btnLamMoi.TabIndex = 1;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnLuu
             // 
@@ -124,6 +126,7 @@
             this.btnLuu.TabIndex = 1;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // cboChuong
             // 
@@ -132,6 +135,7 @@
             this.cboChuong.Name = "cboChuong";
             this.cboChuong.Size = new System.Drawing.Size(203, 21);
             this.cboChuong.TabIndex = 6;
+            this.cboChuong.SelectedIndexChanged += new System.EventHandler(this.cboChuong_SelectedIndexChanged);
             // 
             // btnBo
             // 
@@ -141,6 +145,7 @@
             this.btnBo.TabIndex = 5;
             this.btnBo.Text = "<< Bỏ";
             this.btnBo.UseVisualStyleBackColor = true;
+            this.btnBo.Click += new System.EventHandler(this.btnBo_Click);
             // 
             // btnThem
             // 
@@ -150,6 +155,7 @@
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm >>";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtThoiGian
             // 
@@ -268,7 +274,9 @@
             this.lvDeThi.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colCauHoiID,
             this.colNoiDung});
+            this.lvDeThi.FullRowSelect = true;
             this.lvDeThi.Location = new System.Drawing.Point(406, 230);
+            this.lvDeThi.MultiSelect = false;
             this.lvDeThi.Name = "lvDeThi";
             this.lvDeThi.Size = new System.Drawing.Size(247, 217);
             this.lvDeThi.TabIndex = 10;
@@ -280,7 +288,9 @@
             this.lvChuong.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ID,
             this.CauHoi});
+            this.lvChuong.FullRowSelect = true;
             this.lvChuong.Location = new System.Drawing.Point(49, 230);
+            this.lvChuong.MultiSelect = false;
             this.lvChuong.Name = "lvChuong";
             this.lvChuong.Size = new System.Drawing.Size(260, 217);
             this.lvChuong.TabIndex = 11;

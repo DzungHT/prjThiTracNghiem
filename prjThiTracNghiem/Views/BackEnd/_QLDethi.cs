@@ -162,5 +162,14 @@ namespace prjThiTracNghiem.Views.BackEnd
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int ID = int.Parse(dgvDSDotthi.CurrentRow.Cells[0].Value.ToString());
+            DotThi dt = db.DotThis.Find(ID);
+            _FormDotThi frmDotThi = new _FormDotThi(dt, 0);
+            frmDotThi.CallBack += frmDotThiCallBack;
+            frmDotThi.Show();
+        }
+
     }
 }

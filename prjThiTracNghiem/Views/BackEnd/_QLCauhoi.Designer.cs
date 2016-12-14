@@ -39,7 +39,6 @@
             this.btnCHXoa = new System.Windows.Forms.Button();
             this.dgv_DSCauhoi = new System.Windows.Forms.DataGridView();
             this.btnCHSua = new System.Windows.Forms.Button();
-            this.btnCHTimkiem = new System.Windows.Forms.Button();
             this.btnCHThem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCXoa = new System.Windows.Forms.Button();
@@ -51,6 +50,9 @@
             this.btnHPSua = new System.Windows.Forms.Button();
             this.btnHPThem = new System.Windows.Forms.Button();
             this.dgv_DSHocphan = new System.Windows.Forms.DataGridView();
+            this.btnCHChiTiet = new System.Windows.Forms.Button();
+            this.btnChuongChiTiet = new System.Windows.Forms.Button();
+            this.btnHPChiTiet = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -139,10 +141,10 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.btnCHChiTiet);
             this.groupBox3.Controls.Add(this.btnCHXoa);
             this.groupBox3.Controls.Add(this.dgv_DSCauhoi);
             this.groupBox3.Controls.Add(this.btnCHSua);
-            this.groupBox3.Controls.Add(this.btnCHTimkiem);
             this.groupBox3.Controls.Add(this.btnCHThem);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(362, 2);
@@ -187,16 +189,6 @@
             this.btnCHSua.UseVisualStyleBackColor = true;
             this.btnCHSua.Click += new System.EventHandler(this.btnCHSua_Click);
             // 
-            // btnCHTimkiem
-            // 
-            this.btnCHTimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCHTimkiem.Location = new System.Drawing.Point(24, 373);
-            this.btnCHTimkiem.Name = "btnCHTimkiem";
-            this.btnCHTimkiem.Size = new System.Drawing.Size(75, 23);
-            this.btnCHTimkiem.TabIndex = 2;
-            this.btnCHTimkiem.Text = "Tìm kiếm";
-            this.btnCHTimkiem.UseVisualStyleBackColor = true;
-            // 
             // btnCHThem
             // 
             this.btnCHThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -212,6 +204,7 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox2.Controls.Add(this.btnChuongChiTiet);
             this.groupBox2.Controls.Add(this.btnCXoa);
             this.groupBox2.Controls.Add(this.dgv_DSChuong);
             this.groupBox2.Controls.Add(this.btnCSua);
@@ -227,7 +220,7 @@
             // btnCXoa
             // 
             this.btnCXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCXoa.Location = new System.Drawing.Point(207, 154);
+            this.btnCXoa.Location = new System.Drawing.Point(257, 154);
             this.btnCXoa.Name = "btnCXoa";
             this.btnCXoa.Size = new System.Drawing.Size(75, 23);
             this.btnCXoa.TabIndex = 2;
@@ -254,7 +247,7 @@
             // btnCSua
             // 
             this.btnCSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCSua.Location = new System.Drawing.Point(126, 154);
+            this.btnCSua.Location = new System.Drawing.Point(176, 154);
             this.btnCSua.Name = "btnCSua";
             this.btnCSua.Size = new System.Drawing.Size(75, 23);
             this.btnCSua.TabIndex = 2;
@@ -265,7 +258,7 @@
             // btnCThem
             // 
             this.btnCThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCThem.Location = new System.Drawing.Point(45, 154);
+            this.btnCThem.Location = new System.Drawing.Point(95, 154);
             this.btnCThem.Name = "btnCThem";
             this.btnCThem.Size = new System.Drawing.Size(75, 23);
             this.btnCThem.TabIndex = 2;
@@ -275,6 +268,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnHPChiTiet);
             this.groupBox1.Controls.Add(this.btnHPXoa);
             this.groupBox1.Controls.Add(this.btnHPSua);
             this.groupBox1.Controls.Add(this.btnHPThem);
@@ -290,7 +284,7 @@
             // btnHPXoa
             // 
             this.btnHPXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHPXoa.Location = new System.Drawing.Point(207, 175);
+            this.btnHPXoa.Location = new System.Drawing.Point(257, 175);
             this.btnHPXoa.Name = "btnHPXoa";
             this.btnHPXoa.Size = new System.Drawing.Size(75, 23);
             this.btnHPXoa.TabIndex = 2;
@@ -301,7 +295,7 @@
             // btnHPSua
             // 
             this.btnHPSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHPSua.Location = new System.Drawing.Point(126, 175);
+            this.btnHPSua.Location = new System.Drawing.Point(176, 175);
             this.btnHPSua.Name = "btnHPSua";
             this.btnHPSua.Size = new System.Drawing.Size(75, 23);
             this.btnHPSua.TabIndex = 2;
@@ -312,7 +306,7 @@
             // btnHPThem
             // 
             this.btnHPThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHPThem.Location = new System.Drawing.Point(45, 175);
+            this.btnHPThem.Location = new System.Drawing.Point(95, 175);
             this.btnHPThem.Name = "btnHPThem";
             this.btnHPThem.Size = new System.Drawing.Size(75, 23);
             this.btnHPThem.TabIndex = 2;
@@ -336,6 +330,39 @@
             this.dgv_DSHocphan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSHocphan_CellClick);
             this.dgv_DSHocphan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSHocphan_CellDoubleClick);
             this.dgv_DSHocphan.SelectionChanged += new System.EventHandler(this.dgv_DSHocphan_SelectionChanged);
+            // 
+            // btnCHChiTiet
+            // 
+            this.btnCHChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCHChiTiet.Location = new System.Drawing.Point(24, 373);
+            this.btnCHChiTiet.Name = "btnCHChiTiet";
+            this.btnCHChiTiet.Size = new System.Drawing.Size(75, 23);
+            this.btnCHChiTiet.TabIndex = 3;
+            this.btnCHChiTiet.Text = "Chi tiết";
+            this.btnCHChiTiet.UseVisualStyleBackColor = true;
+            this.btnCHChiTiet.Click += new System.EventHandler(this.btnCHChiTiet_Click);
+            // 
+            // btnChuongChiTiet
+            // 
+            this.btnChuongChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuongChiTiet.Location = new System.Drawing.Point(16, 154);
+            this.btnChuongChiTiet.Name = "btnChuongChiTiet";
+            this.btnChuongChiTiet.Size = new System.Drawing.Size(75, 23);
+            this.btnChuongChiTiet.TabIndex = 4;
+            this.btnChuongChiTiet.Text = "Chi tiết";
+            this.btnChuongChiTiet.UseVisualStyleBackColor = true;
+            this.btnChuongChiTiet.Click += new System.EventHandler(this.btnChuongChiTiet_Click);
+            // 
+            // btnHPChiTiet
+            // 
+            this.btnHPChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHPChiTiet.Location = new System.Drawing.Point(16, 175);
+            this.btnHPChiTiet.Name = "btnHPChiTiet";
+            this.btnHPChiTiet.Size = new System.Drawing.Size(75, 23);
+            this.btnHPChiTiet.TabIndex = 5;
+            this.btnHPChiTiet.Text = "Chi tiết";
+            this.btnHPChiTiet.UseVisualStyleBackColor = true;
+            this.btnHPChiTiet.Click += new System.EventHandler(this.btnHPChiTiet_Click);
             // 
             // _QLCauhoi
             // 
@@ -377,7 +404,6 @@
         private System.Windows.Forms.DataGridView dgv_DSCauhoi;
         private System.Windows.Forms.Button btnCHXoa;
         private System.Windows.Forms.Button btnCHSua;
-        private System.Windows.Forms.Button btnCHTimkiem;
         private System.Windows.Forms.Button btnCHThem;
         private System.Windows.Forms.Button btnCXoa;
         private System.Windows.Forms.Button btnCSua;
@@ -385,5 +411,8 @@
         private System.Windows.Forms.Button btnHPXoa;
         private System.Windows.Forms.Button btnHPSua;
         private System.Windows.Forms.Button btnHPThem;
+        private System.Windows.Forms.Button btnCHChiTiet;
+        private System.Windows.Forms.Button btnChuongChiTiet;
+        private System.Windows.Forms.Button btnHPChiTiet;
     }
 }
