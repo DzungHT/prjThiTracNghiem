@@ -24,8 +24,9 @@ namespace prjThiTracNghiem.Views.FrontEnd
         public void BindData()
         {
             // dổ dữ liệu vào datagridview
-            SqlConnection conn = new SqlConnection(DataConfig);
-
+            DataSet ds= DataAccess.Instance.ExecuteQuery("sp_LayDanhSachDeThi", CommandType.Text);
+            dgvDSDethi.DataSource= ds.Tables[0];
+            
         }
         public void SetThongtindethi(DeThi _dethi)
         {
@@ -44,7 +45,7 @@ namespace prjThiTracNghiem.Views.FrontEnd
         }
         private void dgvDSDethi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int ID = int.Parse(dgvDSDethi.SelectedRows[0].Cells["ID"].ToString());
+            int ID = int.Parse(dgvDSDethi.SelectedRows[0].Cells["ID"].Value.ToString());
             if (ID != 0)
                 this.GetDethi(ID,out _objDethi);
             SetThongtindethi(_objDethi);

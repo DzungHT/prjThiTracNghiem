@@ -52,7 +52,7 @@ namespace prjThiTracNghiem.Views
                 {
                     // Đăng nhập thành công
                     CallBack(tk.LoaiTaiKhoan == 1 ? tk.SinhViens.ToList()[0] as object : tk.GiaoViens.ToList()[0] as object, e);
-                    SendKeys.Send("{ESC}");
+                    this.Dispose();
                 }
                 else
                 {

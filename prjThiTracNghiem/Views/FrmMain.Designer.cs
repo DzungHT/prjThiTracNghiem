@@ -37,10 +37,10 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tenTaiKhoanToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pnlMain = new System.Windows.Forms.Panel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tenNguoiDungToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -122,14 +122,6 @@
             this.tenTaiKhoanToolStripStatusLabel.Tag = "<Tên tài khoản>";
             this.tenTaiKhoanToolStripStatusLabel.Text = "<Tên tài khoản>";
             // 
-            // pnlMain
-            // 
-            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(0, 24);
-            this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(839, 481);
-            this.pnlMain.TabIndex = 2;
-            // 
             // toolStripStatusLabel2
             // 
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
@@ -149,6 +141,14 @@
             this.tenNguoiDungToolStripStatusLabel.Tag = "<Tên người dùng>";
             this.tenNguoiDungToolStripStatusLabel.Text = "<Tên người dùng>";
             // 
+            // pnlMain
+            // 
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(0, 24);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(839, 481);
+            this.pnlMain.TabIndex = 2;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,6 +161,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chương trình thi trắc nghiệm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);

@@ -55,7 +55,7 @@ namespace prjThiTracNghiem.Views.FrontEnd
             SinhVien _sv = sv as SinhVien;
             lblMaSV.Text = _sv.SinhVienID.ToString();
             lblHoTen.Text = _sv.HoTen;
-            lblNgaysinh.Text = _sv.NgaySinh;
+            //lblNgaysinh.Text = _sv.NgaySinh.ToShortDateString();
         }
         public void GetDethi(DeThi dethi)
         {
