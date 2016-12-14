@@ -18,6 +18,7 @@ namespace prjThiTracNghiem.Views.BackEnd
     {
         MyDbContext dbc = new MyDbContext();
         GiaoVien _gv = new GiaoVien();
+        SinhVien _sv = new SinhVien();
         public _QLNguoidung()
         {
             InitializeComponent();
@@ -41,6 +42,18 @@ namespace prjThiTracNghiem.Views.BackEnd
             cboPageSize_DSCauhoi.DisplayMember = "Display";
             cboPageSize_DSCauhoi.ValueMember = "Value";
             this.cboPageSize_DSCauhoi.SelectedIndexChanged += new System.EventHandler(this.cboPageSize_DSCauhoi_SelectedIndexChanged);
+
+            //cboPageSize_DSSinhVien
+            cboPageSize_DSSinhVien.DataSource = dtPageSize.Copy();
+            cboPageSize_DSSinhVien.DisplayMember = "Display";
+            cboPageSize_DSSinhVien.ValueMember = "Value";
+            this.cboPageSize_DSSinhVien.SelectedIndexChanged += new System.EventHandler(this.cboPageSize_DSSinhVien_SelectedIndexChanged);
+
+            //cboPageSize_DSBaiThi
+            cboPageSize_DSBaiThi.DataSource = dtPageSize.Copy();
+            cboPageSize_DSBaiThi.DisplayMember = "Display";
+            cboPageSize_DSBaiThi.ValueMember = "Value";
+            this.cboPageSize_DSBaiThi.SelectedIndexChanged += new System.EventHandler(this.cboPageSize_DSBaiThi_SelectedIndexChanged);
         }
 
         private void LoadDSGiaoVien(string textSearch, int pageNumber, int pageSize)
@@ -48,8 +61,9 @@ namespace prjThiTracNghiem.Views.BackEnd
             var ds = DataAccess.Instance.ExecuteQuery("sp_Lay_DS_GiaoVien", CommandType.StoredProcedure, new SqlParameter("@p_TextSearch", textSearch), new SqlParameter("@p_pageNumber", pageNumber), new SqlParameter("@p_pageSize", pageSize));
             
             dgv_DSGiaovien.DataSource = ds.Tables[0];
+            int PageCount = int.Parse(ds.Tables[1].Rows[0]["PageCount"].ToString());
+            numPageNumber_DSGiaoVien.Maximum = PageCount > 1 ? PageCount : 1;
             numPageNumber_DSGiaoVien.Value = int.Parse(ds.Tables[1].Rows[0]["PageNumber"].ToString());
-            numPageNumber_DSGiaoVien.Maximum = int.Parse(ds.Tables[1].Rows[0]["PageCount"].ToString());
         }
         
         private void LoadDSCauHoi(int GiaoVienID, int pageNumber, int pageSize)
@@ -57,17 +71,29 @@ namespace prjThiTracNghiem.Views.BackEnd
             DataSet ds = DataAccess.Instance.ExecuteQuery("sp_Lay_DS_GiaoVien_CauHoi", CommandType.StoredProcedure, new SqlParameter("@p_GiaoVienID", GiaoVienID), new SqlParameter("@p_pageNumber", pageNumber), new SqlParameter("@p_pageSize", pageSize));
 
             dgv_DSCauhoi.DataSource = ds.Tables[0];
+            int PageCount = int.Parse(ds.Tables[1].Rows[0]["PageCount"].ToString());
+            numPageNumber_DSCauHoi.Maximum = PageCount > 1 ? PageCount : 1;
             numPageNumber_DSCauHoi.Value = int.Parse(ds.Tables[1].Rows[0]["PageNumber"].ToString());
-            numPageNumber_DSCauHoi.Maximum = int.Parse(ds.Tables[1].Rows[0]["PageCount"].ToString());
         }
 
         private void LoadDSSinhVien(string textSearch, int pageNumber, int pageSize)
         {
-            var ds = DataAccess.Instance.ExecuteQuery("sp_Lay_DS_GiaoVien", CommandType.StoredProcedure, new SqlParameter("@p_TextSearch", textSearch), new SqlParameter("@p_pageNumber", pageNumber), new SqlParameter("@p_pageSize", pageSize));
+            var ds = DataAccess.Instance.ExecuteQuery("sp_Lay_DS_SinhVien", CommandType.StoredProcedure, new SqlParameter("@p_TextSearch", textSearch), new SqlParameter("@p_pageNumber", pageNumber), new SqlParameter("@p_pageSize", pageSize));
 
             dgv_DSSinhVien.DataSource = ds.Tables[0];
+            int PageCount = int.Parse(ds.Tables[1].Rows[0]["PageCount"].ToString());
+            numPageNumber_DSSinhVien.Maximum = PageCount > 1 ? PageCount : 1;
             numPageNumber_DSSinhVien.Value = int.Parse(ds.Tables[1].Rows[0]["PageNumber"].ToString());
-            numPageNumber_DSSinhVien.Maximum = int.Parse(ds.Tables[1].Rows[0]["PageCount"].ToString());
+        }
+
+        private void LoadDSBaiThi(int SinhVienID, int pageNumber, int pageSize)
+        {
+            DataSet ds = DataAccess.Instance.ExecuteQuery("sp_Lay_DS_SinhVien_BaiThi", CommandType.StoredProcedure, new SqlParameter("@p_SinhVienID", SinhVienID), new SqlParameter("@p_pageNumber", pageNumber), new SqlParameter("@p_pageSize", pageSize));
+
+            dgv_DSBaiThi.DataSource = ds.Tables[0];
+            int PageCount = int.Parse(ds.Tables[1].Rows[0]["PageCount"].ToString());
+            numPageNumber_DSBaiThi.Maximum =  PageCount > 1 ? PageCount : 1;
+            numPageNumber_DSBaiThi.Value = int.Parse(ds.Tables[1].Rows[0]["PageNumber"].ToString());
         }
 
         private void dgv_DSGiaovien_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -98,6 +124,50 @@ namespace prjThiTracNghiem.Views.BackEnd
         {
             numPageNumber_DSCauHoi.Value = 1;
             LoadDSCauHoi(_gv.GiaoVienID, (int)numPageNumber_DSCauHoi.Value, int.Parse(cboPageSize_DSCauhoi.SelectedValue.ToString()));
+        }
+
+        private void dgv_DSSinhVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int ID = int.Parse(dgv_DSSinhVien.SelectedRows[0].Cells[0].Value.ToString());
+            _sv = dbc.SinhViens.Where(x => x.SinhVienID == ID).FirstOrDefault();
+            lblHoTenSinhVien.Text = _sv.HoTen;
+            lblNgaySinhSinhVien.Text = _sv.NgaySinh.ToShortDateString();
+            lblDiaChi.Text = _sv.DiaChi;
+            lblTaiKhoanSinhVien.Text = _sv.TaiKhoan == null ? null : _sv.TaiKhoan.Username;
+            lblIDSinhVien.Text = _sv.SinhVienID.ToString();
+
+            LoadDSBaiThi(_sv.SinhVienID, 1, 10);
+        }
+
+        private void cboPageSize_DSSinhVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            numPageNumber_DSSinhVien.Value = 1;
+            LoadDSSinhVien(string.IsNullOrEmpty(txtTextSearch_DSSinhVien.Text) ? "%" : txtTextSearch_DSSinhVien.Text, (int)numPageNumber_DSSinhVien.Value, int.Parse(cboPageSize_DSSinhVien.SelectedValue.ToString()));
+        }
+
+        private void cboPageSize_DSBaiThi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            numPageNumber_DSBaiThi.Value = 1;
+            LoadDSBaiThi(_sv.SinhVienID, (int)numPageNumber_DSBaiThi.Value, int.Parse(cboPageSize_DSBaiThi.SelectedValue.ToString()));
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var ctl = sender as TabControl;
+            switch (ctl.SelectedTab.Name)
+            {
+                case "tabGiaoVien":
+                    LoadDSGiaoVien("%", 1, 10);
+                    break;
+                case "tabSinhVien":
+                    LoadDSSinhVien("%", 1, 10);
+                    break;
+            }
+        }
+
+        private void numPageNumber_DSSinhVien_ValueChanged(object sender, EventArgs e)
+        {
+            LoadDSSinhVien(string.IsNullOrEmpty(txtTextSearch_DSSinhVien.Text) ? "%" : txtTextSearch_DSSinhVien.Text, (int)numPageNumber_DSSinhVien.Value, int.Parse(cboPageSize_DSSinhVien.SelectedValue.ToString()));
         }
     }
 }

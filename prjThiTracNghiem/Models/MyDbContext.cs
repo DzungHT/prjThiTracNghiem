@@ -47,17 +47,9 @@ namespace prjThiTracNghiem.Models
                 .WithMany(e => e.CauHois)
                 .Map(m => m.ToTable("CauHoiDeThi").MapLeftKey("CauhoiID").MapRightKey("DeThiID"));
 
-            modelBuilder.Entity<DeThi>()
-                .Property(e => e.MaDeThi)
-                .IsFixedLength();
-
             modelBuilder.Entity<GiaoVien>()
                 .Property(e => e.SDT)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<SinhVien>()
-                .Property(e => e.NgaySinh)
-                .IsFixedLength();
 
             modelBuilder.Entity<SinhVien>()
                 .Property(e => e.DiaChi)
