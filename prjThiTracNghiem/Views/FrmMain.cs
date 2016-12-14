@@ -28,6 +28,19 @@ namespace prjThiTracNghiem.Views
             frm.ShowDialog();
         }
 
+        private void ActiveBackEnd()
+        {
+            quảnLýCâuHỏiToolStripMenuItem.Visible = quảnLýNgườiDùngToolStripMenuItem.Visible =  quảnLýĐềThiToolStripMenuItem.Visible = true;
+           
+        }
+
+        private void ActiveFrontEnd()
+        {
+            quảnLýCâuHỏiToolStripMenuItem.Visible = quảnLýNgườiDùngToolStripMenuItem.Visible = quảnLýĐềThiToolStripMenuItem.Visible = false;
+
+            
+        }
+
         private void Login_CallBack(object sender, EventArgs e)
         {
             đăngXuấtToolStripMenuItem.Visible = true;
@@ -37,20 +50,22 @@ namespace prjThiTracNghiem.Views
             tenTaiKhoanToolStripStatusLabel.Text = _NguoiDung.TaiKhoan.Username;
 
 
-            if (sender.GetType().Name.Equals("GiaoVien"))
-            {
-                // Giao diện của backend
-                var uc = new _QLNguoidung();
-                pnlMain.Controls.Add(uc);
-                uc.Dock = DockStyle.Fill;
-            }
-            else
+            if (_NguoiDung.TaiKhoan.LoaiTaiKhoan == 1)
             {
                 // Giao diện frontend
+                ActiveFrontEnd();
                 var ucFontEnd = new _Main();
                 ucFontEnd.setThongtinsinhvien(sender);
                 pnlMain.Controls.Add(ucFontEnd);
                 ucFontEnd.Dock = DockStyle.Fill;
+            }
+            else
+            {
+                // Giao diện của backend
+                ActiveBackEnd();
+                var uc = new _QLNguoidung();
+                pnlMain.Controls.Add(uc);
+                uc.Dock = DockStyle.Fill;
             }
                       
         }
@@ -62,6 +77,25 @@ namespace prjThiTracNghiem.Views
             {
                 Application.Exit();
             }
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var resDlg = MessageBox.Show("Đăng xuất", "Xác nhận đăng xuất", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if( resDlg == DialogResult.Yes)
+            {
+                pnlMain.Controls.Clear();
+                _NguoiDung = null;
+                ActiveFrontEnd();
+                tenNguoiDungToolStripStatusLabel.Text = tenNguoiDungToolStripStatusLabel.Tag.ToString();
+                tenTaiKhoanToolStripStatusLabel.Text = tenTaiKhoanToolStripStatusLabel.Tag.ToString();
+                đăngXuấtToolStripMenuItem.Visible = false;
+            }
+        }
+
+        private void đăngXuấtToolStripMenuItem_VisibleChanged(object sender, EventArgs e)
+        {
+            đăngNhậpToolStripMenuItem.Visible = !đăngXuấtToolStripMenuItem.Visible;
         }
     }
 }
