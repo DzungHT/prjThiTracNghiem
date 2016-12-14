@@ -55,7 +55,7 @@ namespace prjThiTracNghiem.Views.FrontEnd
             SinhVien _sv = sv as SinhVien;
             lblMaSV.Text = _sv.SinhVienID.ToString();
             lblHoTen.Text = _sv.HoTen;
-            //lblNgaysinh.Text = _sv.NgaySinh.ToShortDateString();
+            lblNgaysinh.Text = _sv.NgaySinh;
         }
         public void GetDethi(DeThi dethi)
         {
@@ -65,7 +65,7 @@ namespace prjThiTracNghiem.Views.FrontEnd
         {
             _Dethi = sender as DeThi;
             setThongtinbaithi(true);
-            // phut = (_Dethi.ThoiGian == null ? 0 : int.Parse(_Dethi.ThoiGian.ToString()));
+            phut = (_Dethi.ThoiGian == null ? 0 : int.Parse(_Dethi.ThoiGian.ToString()));
             ts = new TimeSpan(0,phut,0);
             Time.Start();
             var ucCauhoi = new _Cauhoi();
