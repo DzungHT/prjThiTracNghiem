@@ -36,23 +36,23 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnCHChiTiet = new System.Windows.Forms.Button();
             this.btnCHXoa = new System.Windows.Forms.Button();
             this.dgv_DSCauhoi = new System.Windows.Forms.DataGridView();
             this.btnCHSua = new System.Windows.Forms.Button();
             this.btnCHThem = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnChuongChiTiet = new System.Windows.Forms.Button();
             this.btnCXoa = new System.Windows.Forms.Button();
             this.dgv_DSChuong = new System.Windows.Forms.DataGridView();
             this.btnCSua = new System.Windows.Forms.Button();
             this.btnCThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnHPChiTiet = new System.Windows.Forms.Button();
             this.btnHPXoa = new System.Windows.Forms.Button();
             this.btnHPSua = new System.Windows.Forms.Button();
             this.btnHPThem = new System.Windows.Forms.Button();
             this.dgv_DSHocphan = new System.Windows.Forms.DataGridView();
-            this.btnCHChiTiet = new System.Windows.Forms.Button();
-            this.btnChuongChiTiet = new System.Windows.Forms.Button();
-            this.btnHPChiTiet = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -74,14 +74,15 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(783, 102);
+            this.panel1.Size = new System.Drawing.Size(930, 102);
             this.panel1.TabIndex = 0;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(196, 12);
+            this.label1.Location = new System.Drawing.Point(331, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(269, 31);
             this.label1.TabIndex = 1;
@@ -108,17 +109,17 @@
             this.panel2.Location = new System.Drawing.Point(3, 108);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(1);
-            this.panel2.Size = new System.Drawing.Size(806, 457);
+            this.panel2.Size = new System.Drawing.Size(930, 508);
             this.panel2.TabIndex = 0;
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(4, 0);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(1, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(779, 430);
+            this.tabControl1.Size = new System.Drawing.Size(928, 506);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -131,7 +132,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(771, 404);
+            this.tabPage1.Size = new System.Drawing.Size(920, 480);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Câu hỏi";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -149,15 +150,28 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(362, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(401, 398);
+            this.groupBox3.Size = new System.Drawing.Size(550, 474);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách câu hỏi";
             // 
+            // btnCHChiTiet
+            // 
+            this.btnCHChiTiet.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCHChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCHChiTiet.Location = new System.Drawing.Point(116, 445);
+            this.btnCHChiTiet.Name = "btnCHChiTiet";
+            this.btnCHChiTiet.Size = new System.Drawing.Size(75, 23);
+            this.btnCHChiTiet.TabIndex = 3;
+            this.btnCHChiTiet.Text = "Chi tiết";
+            this.btnCHChiTiet.UseVisualStyleBackColor = true;
+            this.btnCHChiTiet.Click += new System.EventHandler(this.btnCHChiTiet_Click);
+            // 
             // btnCHXoa
             // 
+            this.btnCHXoa.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCHXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCHXoa.Location = new System.Drawing.Point(267, 373);
+            this.btnCHXoa.Location = new System.Drawing.Point(359, 445);
             this.btnCHXoa.Name = "btnCHXoa";
             this.btnCHXoa.Size = new System.Drawing.Size(75, 23);
             this.btnCHXoa.TabIndex = 2;
@@ -174,14 +188,15 @@
             this.dgv_DSCauhoi.Location = new System.Drawing.Point(12, 20);
             this.dgv_DSCauhoi.Name = "dgv_DSCauhoi";
             this.dgv_DSCauhoi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DSCauhoi.Size = new System.Drawing.Size(389, 348);
+            this.dgv_DSCauhoi.Size = new System.Drawing.Size(538, 419);
             this.dgv_DSCauhoi.TabIndex = 0;
             this.dgv_DSCauhoi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSCauhoi_CellDoubleClick);
             // 
             // btnCHSua
             // 
+            this.btnCHSua.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCHSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCHSua.Location = new System.Drawing.Point(186, 373);
+            this.btnCHSua.Location = new System.Drawing.Point(278, 445);
             this.btnCHSua.Name = "btnCHSua";
             this.btnCHSua.Size = new System.Drawing.Size(75, 23);
             this.btnCHSua.TabIndex = 2;
@@ -191,8 +206,9 @@
             // 
             // btnCHThem
             // 
+            this.btnCHThem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCHThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCHThem.Location = new System.Drawing.Point(105, 373);
+            this.btnCHThem.Location = new System.Drawing.Point(197, 445);
             this.btnCHThem.Name = "btnCHThem";
             this.btnCHThem.Size = new System.Drawing.Size(75, 23);
             this.btnCHThem.TabIndex = 2;
@@ -212,15 +228,28 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(6, 217);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(350, 183);
+            this.groupBox2.Size = new System.Drawing.Size(350, 259);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách chương";
             // 
+            // btnChuongChiTiet
+            // 
+            this.btnChuongChiTiet.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnChuongChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChuongChiTiet.Location = new System.Drawing.Point(17, 230);
+            this.btnChuongChiTiet.Name = "btnChuongChiTiet";
+            this.btnChuongChiTiet.Size = new System.Drawing.Size(75, 23);
+            this.btnChuongChiTiet.TabIndex = 4;
+            this.btnChuongChiTiet.Text = "Chi tiết";
+            this.btnChuongChiTiet.UseVisualStyleBackColor = true;
+            this.btnChuongChiTiet.Click += new System.EventHandler(this.btnChuongChiTiet_Click);
+            // 
             // btnCXoa
             // 
+            this.btnCXoa.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCXoa.Location = new System.Drawing.Point(257, 154);
+            this.btnCXoa.Location = new System.Drawing.Point(258, 230);
             this.btnCXoa.Name = "btnCXoa";
             this.btnCXoa.Size = new System.Drawing.Size(75, 23);
             this.btnCXoa.TabIndex = 2;
@@ -232,22 +261,24 @@
             // 
             this.dgv_DSChuong.AllowUserToAddRows = false;
             this.dgv_DSChuong.AllowUserToDeleteRows = false;
-            this.dgv_DSChuong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgv_DSChuong.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_DSChuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DSChuong.Location = new System.Drawing.Point(6, 23);
             this.dgv_DSChuong.Name = "dgv_DSChuong";
             this.dgv_DSChuong.ReadOnly = true;
             this.dgv_DSChuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DSChuong.Size = new System.Drawing.Size(338, 125);
+            this.dgv_DSChuong.Size = new System.Drawing.Size(338, 201);
             this.dgv_DSChuong.TabIndex = 1;
             this.dgv_DSChuong.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSChuong_CellDoubleClick);
             this.dgv_DSChuong.SelectionChanged += new System.EventHandler(this.dgv_DSChuong_SelectionChanged);
             // 
             // btnCSua
             // 
+            this.btnCSua.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCSua.Location = new System.Drawing.Point(176, 154);
+            this.btnCSua.Location = new System.Drawing.Point(177, 230);
             this.btnCSua.Name = "btnCSua";
             this.btnCSua.Size = new System.Drawing.Size(75, 23);
             this.btnCSua.TabIndex = 2;
@@ -257,8 +288,9 @@
             // 
             // btnCThem
             // 
+            this.btnCThem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCThem.Location = new System.Drawing.Point(95, 154);
+            this.btnCThem.Location = new System.Drawing.Point(96, 230);
             this.btnCThem.Name = "btnCThem";
             this.btnCThem.Size = new System.Drawing.Size(75, 23);
             this.btnCThem.TabIndex = 2;
@@ -274,17 +306,30 @@
             this.groupBox1.Controls.Add(this.btnHPThem);
             this.groupBox1.Controls.Add(this.dgv_DSHocphan);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(6, 7);
+            this.groupBox1.Location = new System.Drawing.Point(6, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(350, 211);
+            this.groupBox1.Size = new System.Drawing.Size(350, 216);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách học phần";
             // 
+            // btnHPChiTiet
+            // 
+            this.btnHPChiTiet.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnHPChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHPChiTiet.Location = new System.Drawing.Point(17, 186);
+            this.btnHPChiTiet.Name = "btnHPChiTiet";
+            this.btnHPChiTiet.Size = new System.Drawing.Size(75, 23);
+            this.btnHPChiTiet.TabIndex = 5;
+            this.btnHPChiTiet.Text = "Chi tiết";
+            this.btnHPChiTiet.UseVisualStyleBackColor = true;
+            this.btnHPChiTiet.Click += new System.EventHandler(this.btnHPChiTiet_Click);
+            // 
             // btnHPXoa
             // 
+            this.btnHPXoa.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnHPXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHPXoa.Location = new System.Drawing.Point(257, 175);
+            this.btnHPXoa.Location = new System.Drawing.Point(258, 186);
             this.btnHPXoa.Name = "btnHPXoa";
             this.btnHPXoa.Size = new System.Drawing.Size(75, 23);
             this.btnHPXoa.TabIndex = 2;
@@ -294,8 +339,9 @@
             // 
             // btnHPSua
             // 
+            this.btnHPSua.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnHPSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHPSua.Location = new System.Drawing.Point(176, 175);
+            this.btnHPSua.Location = new System.Drawing.Point(177, 186);
             this.btnHPSua.Name = "btnHPSua";
             this.btnHPSua.Size = new System.Drawing.Size(75, 23);
             this.btnHPSua.TabIndex = 2;
@@ -305,8 +351,9 @@
             // 
             // btnHPThem
             // 
+            this.btnHPThem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnHPThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHPThem.Location = new System.Drawing.Point(95, 175);
+            this.btnHPThem.Location = new System.Drawing.Point(96, 186);
             this.btnHPThem.Name = "btnHPThem";
             this.btnHPThem.Size = new System.Drawing.Size(75, 23);
             this.btnHPThem.TabIndex = 2;
@@ -318,51 +365,19 @@
             // 
             this.dgv_DSHocphan.AllowUserToAddRows = false;
             this.dgv_DSHocphan.AllowUserToDeleteRows = false;
-            this.dgv_DSHocphan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgv_DSHocphan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_DSHocphan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DSHocphan.Location = new System.Drawing.Point(6, 23);
             this.dgv_DSHocphan.Name = "dgv_DSHocphan";
             this.dgv_DSHocphan.ReadOnly = true;
             this.dgv_DSHocphan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DSHocphan.Size = new System.Drawing.Size(338, 146);
+            this.dgv_DSHocphan.Size = new System.Drawing.Size(338, 157);
             this.dgv_DSHocphan.TabIndex = 1;
             this.dgv_DSHocphan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSHocphan_CellClick);
             this.dgv_DSHocphan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSHocphan_CellDoubleClick);
             this.dgv_DSHocphan.SelectionChanged += new System.EventHandler(this.dgv_DSHocphan_SelectionChanged);
-            // 
-            // btnCHChiTiet
-            // 
-            this.btnCHChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCHChiTiet.Location = new System.Drawing.Point(24, 373);
-            this.btnCHChiTiet.Name = "btnCHChiTiet";
-            this.btnCHChiTiet.Size = new System.Drawing.Size(75, 23);
-            this.btnCHChiTiet.TabIndex = 3;
-            this.btnCHChiTiet.Text = "Chi tiết";
-            this.btnCHChiTiet.UseVisualStyleBackColor = true;
-            this.btnCHChiTiet.Click += new System.EventHandler(this.btnCHChiTiet_Click);
-            // 
-            // btnChuongChiTiet
-            // 
-            this.btnChuongChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChuongChiTiet.Location = new System.Drawing.Point(16, 154);
-            this.btnChuongChiTiet.Name = "btnChuongChiTiet";
-            this.btnChuongChiTiet.Size = new System.Drawing.Size(75, 23);
-            this.btnChuongChiTiet.TabIndex = 4;
-            this.btnChuongChiTiet.Text = "Chi tiết";
-            this.btnChuongChiTiet.UseVisualStyleBackColor = true;
-            this.btnChuongChiTiet.Click += new System.EventHandler(this.btnChuongChiTiet_Click);
-            // 
-            // btnHPChiTiet
-            // 
-            this.btnHPChiTiet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHPChiTiet.Location = new System.Drawing.Point(16, 175);
-            this.btnHPChiTiet.Name = "btnHPChiTiet";
-            this.btnHPChiTiet.Size = new System.Drawing.Size(75, 23);
-            this.btnHPChiTiet.TabIndex = 5;
-            this.btnHPChiTiet.Text = "Chi tiết";
-            this.btnHPChiTiet.UseVisualStyleBackColor = true;
-            this.btnHPChiTiet.Click += new System.EventHandler(this.btnHPChiTiet_Click);
             // 
             // _QLCauhoi
             // 
@@ -371,7 +386,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "_QLCauhoi";
-            this.Size = new System.Drawing.Size(789, 544);
+            this.Size = new System.Drawing.Size(936, 619);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

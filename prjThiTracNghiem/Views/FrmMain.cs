@@ -16,6 +16,7 @@ namespace prjThiTracNghiem.Views
     public partial class FrmMain : Form
     {
         INguoiDung _NguoiDung;
+        GiaoVien _GiaoVien;
         public FrmMain()
         {
             InitializeComponent();
@@ -63,9 +64,8 @@ namespace prjThiTracNghiem.Views
             {
                 // Giao diện của backend
                 ActiveBackEnd();
-                var uc = new _QLNguoidung();
-                pnlMain.Controls.Add(uc);
-                uc.Dock = DockStyle.Fill;
+                _GiaoVien = sender as GiaoVien;
+
             }
                       
         }
@@ -100,7 +100,7 @@ namespace prjThiTracNghiem.Views
 
         private void quảnLýCâuHỏiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var uc = new _QLCauhoi(2);
+            var uc = new _QLCauhoi(_GiaoVien.GiaoVienID);
             pnlMain.Controls.Clear();
             pnlMain.Controls.Add(uc);
             uc.Dock = DockStyle.Fill;
