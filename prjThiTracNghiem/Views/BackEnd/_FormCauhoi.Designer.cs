@@ -188,6 +188,7 @@
             this.btnHuy.TabIndex = 1;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLammoi
             // 
@@ -198,7 +199,7 @@
             this.btnLammoi.TabIndex = 1;
             this.btnLammoi.Text = "Làm mới";
             this.btnLammoi.UseVisualStyleBackColor = true;
-            this.btnLammoi.Click += new System.EventHandler(this.button1_Click);
+            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
             // 
             // btnLuu
             // 
@@ -209,7 +210,7 @@
             this.btnLuu.TabIndex = 1;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.button1_Click);
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // label10
             // 

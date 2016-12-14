@@ -181,9 +181,8 @@
             this.lblThoigianconlai.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThoigianconlai.Location = new System.Drawing.Point(290, 14);
             this.lblThoigianconlai.Name = "lblThoigianconlai";
-            this.lblThoigianconlai.Size = new System.Drawing.Size(114, 31);
+            this.lblThoigianconlai.Size = new System.Drawing.Size(0, 31);
             this.lblThoigianconlai.TabIndex = 0;
-            this.lblThoigianconlai.Text = "<00:00>";
             // 
             // lblThoigian
             // 

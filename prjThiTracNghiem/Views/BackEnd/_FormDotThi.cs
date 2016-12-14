@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,44 +11,45 @@ using System.Windows.Forms;
 
 namespace prjThiTracNghiem.Views.BackEnd
 {
-    public partial class _FormHocphan : Form
+    public partial class _FormDotThi : Form
     {
         public event EventHandler CallBack;
         MyDbContext db2 = new MyDbContext();
-        HocPhan hp;
+        DotThi dotThi;
         int status;
-        //status: 0-View, 1 - Add, 2 - update
-        public _FormHocphan()
+        public _FormDotThi()
         {
             InitializeComponent();
             status = 1;
-            hp = null;
+            dotThi = null;
             Init();
         }
-        public _FormHocphan(HocPhan hocPhan,int TrangThai)
+        public _FormDotThi(DotThi dt, int TrangThai)
         {
             InitializeComponent();
-            hp = hocPhan;
             status = TrangThai;
-            Init(); 
+            dotThi = dt;
+            Init();
         }
         private void Init()
         {
-            if (hp == null)
+            if (status == 0)
+            {
+                btnLammoi.Enabled = btnLuu.Enabled = textBox1.Enabled = textBox2.Enabled= false;
+            }
+            if (status == 1)
             {
                 textBox1.Text = textBox2.Text = string.Empty;
+                checkBox1.Checked = false;
             }
             else
             {
-                textBox1.Text = hp.TenHocPhan;
-                textBox2.Text = hp.SoTinChi.ToString();
-            }
-            if (status == 0)
-            {
-                btnLuu.Enabled = false;
-                btnLammoi.Enabled = false;
+                textBox1.Text = dotThi.TenDotThi;
+                textBox2.Text = dotThi.NamHoc;
+                checkBox1.Checked = (dotThi.HienThi == null || dotThi.HienThi == false ? false : true);
             }
         }
+
         private void btnLuu_Click(object sender, EventArgs e)
         {
             switch (status)
@@ -57,10 +57,11 @@ namespace prjThiTracNghiem.Views.BackEnd
                 case 1:
                     try
                     {
-                        HocPhan newHP = new HocPhan();
-                        newHP.TenHocPhan = textBox1.Text;
-                        newHP.SoTinChi = int.Parse(textBox2.Text);
-                        db2.HocPhans.Add(newHP);
+                        DotThi dt = new DotThi();
+                        dt.TenDotThi = textBox1.Text;
+                        dt.NamHoc = textBox2.Text;
+                        dt.HienThi = checkBox1.Checked;
+                        db2.DotThis.Add(dt);
                         db2.SaveChanges();
                         CallBack(true, e);
                         MessageBox.Show("Insert thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -75,9 +76,9 @@ namespace prjThiTracNghiem.Views.BackEnd
                 case 2:
                     try
                     {
-                        hp.TenHocPhan = textBox1.Text;
-                        hp.SoTinChi = int.Parse(textBox2.Text);
-                        //db2.Entry(hp).State = EntityState.Modified;
+                        dotThi.TenDotThi = textBox1.Text;
+                        dotThi.NamHoc = textBox2.Text;
+                        dotThi.HienThi = checkBox1.Checked;
                         db2.SaveChanges();
                         CallBack(true, e);
                         MessageBox.Show("Update thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -95,15 +96,14 @@ namespace prjThiTracNghiem.Views.BackEnd
             }
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnLammoi_Click(object sender, EventArgs e)
         {
             Init();
         }
 
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

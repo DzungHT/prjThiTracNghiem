@@ -72,7 +72,7 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(744, 102);
+            this.panel1.Size = new System.Drawing.Size(783, 102);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -103,22 +103,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.tabControl1);
-            this.panel2.Location = new System.Drawing.Point(3, 111);
+            this.panel2.Location = new System.Drawing.Point(3, 108);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(1);
-            this.panel2.Size = new System.Drawing.Size(744, 386);
+            this.panel2.Size = new System.Drawing.Size(806, 457);
             this.panel2.TabIndex = 0;
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Location = new System.Drawing.Point(4, 4);
+            this.tabControl1.Location = new System.Drawing.Point(4, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(736, 378);
+            this.tabControl1.Size = new System.Drawing.Size(779, 430);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -131,7 +129,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(728, 352);
+            this.tabPage1.Size = new System.Drawing.Size(771, 404);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Câu hỏi";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -147,9 +145,9 @@
             this.groupBox3.Controls.Add(this.btnCHTimkiem);
             this.groupBox3.Controls.Add(this.btnCHThem);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(362, 6);
+            this.groupBox3.Location = new System.Drawing.Point(362, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(358, 338);
+            this.groupBox3.Size = new System.Drawing.Size(401, 398);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách câu hỏi";
@@ -157,12 +155,13 @@
             // btnCHXoa
             // 
             this.btnCHXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCHXoa.Location = new System.Drawing.Point(264, 309);
+            this.btnCHXoa.Location = new System.Drawing.Point(267, 373);
             this.btnCHXoa.Name = "btnCHXoa";
             this.btnCHXoa.Size = new System.Drawing.Size(75, 23);
             this.btnCHXoa.TabIndex = 2;
             this.btnCHXoa.Text = "Xóa";
             this.btnCHXoa.UseVisualStyleBackColor = true;
+            this.btnCHXoa.Click += new System.EventHandler(this.btnCHXoa_Click);
             // 
             // dgv_DSCauhoi
             // 
@@ -170,25 +169,28 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_DSCauhoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DSCauhoi.Location = new System.Drawing.Point(6, 19);
+            this.dgv_DSCauhoi.Location = new System.Drawing.Point(12, 20);
             this.dgv_DSCauhoi.Name = "dgv_DSCauhoi";
-            this.dgv_DSCauhoi.Size = new System.Drawing.Size(346, 288);
+            this.dgv_DSCauhoi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_DSCauhoi.Size = new System.Drawing.Size(389, 348);
             this.dgv_DSCauhoi.TabIndex = 0;
+            this.dgv_DSCauhoi.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSCauhoi_CellDoubleClick);
             // 
             // btnCHSua
             // 
             this.btnCHSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCHSua.Location = new System.Drawing.Point(183, 309);
+            this.btnCHSua.Location = new System.Drawing.Point(186, 373);
             this.btnCHSua.Name = "btnCHSua";
             this.btnCHSua.Size = new System.Drawing.Size(75, 23);
             this.btnCHSua.TabIndex = 2;
             this.btnCHSua.Text = "Sửa";
             this.btnCHSua.UseVisualStyleBackColor = true;
+            this.btnCHSua.Click += new System.EventHandler(this.btnCHSua_Click);
             // 
             // btnCHTimkiem
             // 
             this.btnCHTimkiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCHTimkiem.Location = new System.Drawing.Point(21, 309);
+            this.btnCHTimkiem.Location = new System.Drawing.Point(24, 373);
             this.btnCHTimkiem.Name = "btnCHTimkiem";
             this.btnCHTimkiem.Size = new System.Drawing.Size(75, 23);
             this.btnCHTimkiem.TabIndex = 2;
@@ -198,12 +200,13 @@
             // btnCHThem
             // 
             this.btnCHThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCHThem.Location = new System.Drawing.Point(102, 309);
+            this.btnCHThem.Location = new System.Drawing.Point(105, 373);
             this.btnCHThem.Name = "btnCHThem";
             this.btnCHThem.Size = new System.Drawing.Size(75, 23);
             this.btnCHThem.TabIndex = 2;
             this.btnCHThem.Text = "Thêm";
             this.btnCHThem.UseVisualStyleBackColor = true;
+            this.btnCHThem.Click += new System.EventHandler(this.btnCHThem_Click);
             // 
             // groupBox2
             // 
@@ -214,9 +217,9 @@
             this.groupBox2.Controls.Add(this.btnCSua);
             this.groupBox2.Controls.Add(this.btnCThem);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(6, 212);
+            this.groupBox2.Location = new System.Drawing.Point(6, 217);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(350, 132);
+            this.groupBox2.Size = new System.Drawing.Size(350, 183);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách chương";
@@ -224,12 +227,13 @@
             // btnCXoa
             // 
             this.btnCXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCXoa.Location = new System.Drawing.Point(207, 103);
+            this.btnCXoa.Location = new System.Drawing.Point(207, 154);
             this.btnCXoa.Name = "btnCXoa";
             this.btnCXoa.Size = new System.Drawing.Size(75, 23);
             this.btnCXoa.TabIndex = 2;
             this.btnCXoa.Text = "Xóa";
             this.btnCXoa.UseVisualStyleBackColor = true;
+            this.btnCXoa.Click += new System.EventHandler(this.btnCXoa_Click);
             // 
             // dgv_DSChuong
             // 
@@ -238,31 +242,36 @@
             this.dgv_DSChuong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_DSChuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DSChuong.Location = new System.Drawing.Point(6, 19);
+            this.dgv_DSChuong.Location = new System.Drawing.Point(6, 23);
             this.dgv_DSChuong.Name = "dgv_DSChuong";
             this.dgv_DSChuong.ReadOnly = true;
-            this.dgv_DSChuong.Size = new System.Drawing.Size(338, 82);
+            this.dgv_DSChuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_DSChuong.Size = new System.Drawing.Size(338, 125);
             this.dgv_DSChuong.TabIndex = 1;
+            this.dgv_DSChuong.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSChuong_CellDoubleClick);
+            this.dgv_DSChuong.SelectionChanged += new System.EventHandler(this.dgv_DSChuong_SelectionChanged);
             // 
             // btnCSua
             // 
             this.btnCSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCSua.Location = new System.Drawing.Point(126, 103);
+            this.btnCSua.Location = new System.Drawing.Point(126, 154);
             this.btnCSua.Name = "btnCSua";
             this.btnCSua.Size = new System.Drawing.Size(75, 23);
             this.btnCSua.TabIndex = 2;
             this.btnCSua.Text = "Sửa";
             this.btnCSua.UseVisualStyleBackColor = true;
+            this.btnCSua.Click += new System.EventHandler(this.btnCSua_Click);
             // 
             // btnCThem
             // 
             this.btnCThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCThem.Location = new System.Drawing.Point(45, 103);
+            this.btnCThem.Location = new System.Drawing.Point(45, 154);
             this.btnCThem.Name = "btnCThem";
             this.btnCThem.Size = new System.Drawing.Size(75, 23);
             this.btnCThem.TabIndex = 2;
             this.btnCThem.Text = "Thêm";
             this.btnCThem.UseVisualStyleBackColor = true;
+            this.btnCThem.Click += new System.EventHandler(this.btnCThem_Click);
             // 
             // groupBox1
             // 
@@ -271,9 +280,9 @@
             this.groupBox1.Controls.Add(this.btnHPThem);
             this.groupBox1.Controls.Add(this.dgv_DSHocphan);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Location = new System.Drawing.Point(6, 7);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(350, 200);
+            this.groupBox1.Size = new System.Drawing.Size(350, 211);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách học phần";
@@ -281,32 +290,35 @@
             // btnHPXoa
             // 
             this.btnHPXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHPXoa.Location = new System.Drawing.Point(207, 171);
+            this.btnHPXoa.Location = new System.Drawing.Point(207, 175);
             this.btnHPXoa.Name = "btnHPXoa";
             this.btnHPXoa.Size = new System.Drawing.Size(75, 23);
             this.btnHPXoa.TabIndex = 2;
             this.btnHPXoa.Text = "Xóa";
             this.btnHPXoa.UseVisualStyleBackColor = true;
+            this.btnHPXoa.Click += new System.EventHandler(this.btnHPXoa_Click);
             // 
             // btnHPSua
             // 
             this.btnHPSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHPSua.Location = new System.Drawing.Point(126, 171);
+            this.btnHPSua.Location = new System.Drawing.Point(126, 175);
             this.btnHPSua.Name = "btnHPSua";
             this.btnHPSua.Size = new System.Drawing.Size(75, 23);
             this.btnHPSua.TabIndex = 2;
             this.btnHPSua.Text = "Sửa";
             this.btnHPSua.UseVisualStyleBackColor = true;
+            this.btnHPSua.Click += new System.EventHandler(this.btnHPSua_Click);
             // 
             // btnHPThem
             // 
             this.btnHPThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHPThem.Location = new System.Drawing.Point(45, 171);
+            this.btnHPThem.Location = new System.Drawing.Point(45, 175);
             this.btnHPThem.Name = "btnHPThem";
             this.btnHPThem.Size = new System.Drawing.Size(75, 23);
             this.btnHPThem.TabIndex = 2;
             this.btnHPThem.Text = "Thêm";
             this.btnHPThem.UseVisualStyleBackColor = true;
+            this.btnHPThem.Click += new System.EventHandler(this.btnHPThem_Click);
             // 
             // dgv_DSHocphan
             // 
@@ -315,11 +327,15 @@
             this.dgv_DSHocphan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_DSHocphan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_DSHocphan.Location = new System.Drawing.Point(6, 19);
+            this.dgv_DSHocphan.Location = new System.Drawing.Point(6, 23);
             this.dgv_DSHocphan.Name = "dgv_DSHocphan";
             this.dgv_DSHocphan.ReadOnly = true;
+            this.dgv_DSHocphan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_DSHocphan.Size = new System.Drawing.Size(338, 146);
             this.dgv_DSHocphan.TabIndex = 1;
+            this.dgv_DSHocphan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSHocphan_CellClick);
+            this.dgv_DSHocphan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSHocphan_CellDoubleClick);
+            this.dgv_DSHocphan.SelectionChanged += new System.EventHandler(this.dgv_DSHocphan_SelectionChanged);
             // 
             // _QLCauhoi
             // 
@@ -328,7 +344,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "_QLCauhoi";
-            this.Size = new System.Drawing.Size(750, 500);
+            this.Size = new System.Drawing.Size(789, 544);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
