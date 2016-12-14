@@ -51,7 +51,7 @@ namespace prjThiTracNghiem.Views.BackEnd
             }
             else
             {
-                txtGiaoVienID.Text = txtTaiKhoanID.Text = txtTenTaiKhoan.Text = txtTenGiaoVien.Text = txtSoDienThoai.Text = txtMatKhau.Text = string.Empty;
+                txtTenTaiKhoan.Text = txtTenGiaoVien.Text = txtSoDienThoai.Text = txtMatKhau.Text = string.Empty;
             }
         }
 

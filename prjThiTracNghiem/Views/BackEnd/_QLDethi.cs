@@ -119,22 +119,56 @@ namespace prjThiTracNghiem.Views.BackEnd
 
         private void btnDeTChitiet_Click(object sender, EventArgs e)
         {
-
+            int ID = int.Parse(dgvDeThi.CurrentRow.Cells[0].Value.ToString());
+            DeThi dt = db.DeThis.Find(ID);
+            _FormDethi frmDeThi = new _FormDethi(dt, 0);
+            frmDeThi.CallBack += frmDeThiCallBack;
+            frmDeThi.Show();
         }
 
         private void btnDeThiThem_Click(object sender, EventArgs e)
         {
-
+            DeThi dt = new DeThi();
+            dt.DotThiID = int.Parse(dgvDSDotthi.CurrentRow.Cells[0].Value.ToString());
+            dt.HocPhanID = int.Parse(dgvHocPhan.CurrentRow.Cells[0].Value.ToString());
+            _FormDethi frmDeThi = new _FormDethi(dt, 1);
+            frmDeThi.CallBack += frmDeThiCallBack;
+            frmDeThi.Show();
         }
 
         private void btnDeThiSua_Click(object sender, EventArgs e)
         {
-
+            int ID = int.Parse(dgvDeThi.CurrentRow.Cells[0].Value.ToString());
+            DeThi dt = db.DeThis.Find(ID);
+            _FormDethi frmDeThi = new _FormDethi(dt, 2);
+            frmDeThi.CallBack += frmDeThiCallBack;
+            frmDeThi.Show();
         }
 
         private void btnDeThiXoa_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int id = int.Parse(dgvDeThi.CurrentRow.Cells[0].Value.ToString());
+                DeThi c = db.DeThis.Find(id);
+                db.Entry(c).State = System.Data.Entity.EntityState.Deleted;
+                db.SaveChanges();
+                MessageBox.Show("Xoá thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Init();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int ID = int.Parse(dgvDSDotthi.CurrentRow.Cells[0].Value.ToString());
+            DotThi dt = db.DotThis.Find(ID);
+            _FormDotThi frmDotThi = new _FormDotThi(dt, 0);
+            frmDotThi.CallBack += frmDotThiCallBack;
+            frmDotThi.Show();
         }
 
     }

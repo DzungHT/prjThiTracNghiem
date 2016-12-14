@@ -135,6 +135,7 @@
             this.ClientSize = new System.Drawing.Size(714, 197);
             this.Controls.Add(this.panel1);
             this.Name = "_FormHocphan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin học phần";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

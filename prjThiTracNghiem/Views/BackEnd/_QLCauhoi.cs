@@ -203,5 +203,32 @@ namespace prjThiTracNghiem.Views.BackEnd
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnCHChiTiet_Click(object sender, EventArgs e)
+        {
+            int ID = int.Parse(dgv_DSCauhoi.CurrentRow.Cells[0].Value.ToString());
+            CauHoi ch = db.CauHois.Find(ID);
+            _FormCauhoi frmCauHoi = new _FormCauhoi(ch, 0);
+            frmCauHoi.CallBack += frmChuong_CallBack;
+            frmCauHoi.Show();
+        }
+
+        private void btnChuongChiTiet_Click(object sender, EventArgs e)
+        {
+            int ID = int.Parse(dgv_DSChuong.CurrentRow.Cells[0].Value.ToString());
+            Chuong c = db.Chuongs.Find(ID);
+            _FormChuong frmChuong = new _FormChuong(c, 0);
+            frmChuong.CallBack += frmChuong_CallBack;
+            frmChuong.Show();
+        }
+
+        private void btnHPChiTiet_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(dgv_DSHocphan.CurrentRow.Cells[0].Value.ToString());
+            HocPhan hp = db.HocPhans.Find(id);
+            _FormHocphan frmHocPhan = new _FormHocphan(hp, 0);
+            frmHocPhan.CallBack += frmHocPhan_CallBack;
+            frmHocPhan.Show();
+        }
     }
 }
