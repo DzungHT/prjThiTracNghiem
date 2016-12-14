@@ -34,6 +34,9 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýCâuHỏiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýĐềThiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quảnLýNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tenTaiKhoanToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -41,9 +44,6 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tenNguoiDungToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.quảnLýĐềThiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýNgườiDùngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quảnLýCâuHỏiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -103,6 +103,30 @@
             this.thoátToolStripMenuItem.Text = "Thoát";
             this.thoátToolStripMenuItem.Click += new System.EventHandler(this.thoátToolStripMenuItem_Click);
             // 
+            // quảnLýCâuHỏiToolStripMenuItem
+            // 
+            this.quảnLýCâuHỏiToolStripMenuItem.Name = "quảnLýCâuHỏiToolStripMenuItem";
+            this.quảnLýCâuHỏiToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.quảnLýCâuHỏiToolStripMenuItem.Text = "Quản lý câu hỏi";
+            this.quảnLýCâuHỏiToolStripMenuItem.Visible = false;
+            this.quảnLýCâuHỏiToolStripMenuItem.Click += new System.EventHandler(this.quảnLýCâuHỏiToolStripMenuItem_Click);
+            // 
+            // quảnLýĐềThiToolStripMenuItem
+            // 
+            this.quảnLýĐềThiToolStripMenuItem.Name = "quảnLýĐềThiToolStripMenuItem";
+            this.quảnLýĐềThiToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.quảnLýĐềThiToolStripMenuItem.Text = "Quản lý đề thi";
+            this.quảnLýĐềThiToolStripMenuItem.Visible = false;
+            this.quảnLýĐềThiToolStripMenuItem.Click += new System.EventHandler(this.quảnLýĐềThiToolStripMenuItem_Click);
+            // 
+            // quảnLýNgườiDùngToolStripMenuItem
+            // 
+            this.quảnLýNgườiDùngToolStripMenuItem.Name = "quảnLýNgườiDùngToolStripMenuItem";
+            this.quảnLýNgườiDùngToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
+            this.quảnLýNgườiDùngToolStripMenuItem.Text = "Quản lý người dùng";
+            this.quảnLýNgườiDùngToolStripMenuItem.Visible = false;
+            this.quảnLýNgườiDùngToolStripMenuItem.Click += new System.EventHandler(this.quảnLýNgườiDùngToolStripMenuItem_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -120,13 +144,13 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(121, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(122, 17);
             this.toolStripStatusLabel1.Text = "Tài khoản đăng nhập:";
             // 
             // tenTaiKhoanToolStripStatusLabel
             // 
             this.tenTaiKhoanToolStripStatusLabel.Name = "tenTaiKhoanToolStripStatusLabel";
-            this.tenTaiKhoanToolStripStatusLabel.Size = new System.Drawing.Size(94, 17);
+            this.tenTaiKhoanToolStripStatusLabel.Size = new System.Drawing.Size(95, 17);
             this.tenTaiKhoanToolStripStatusLabel.Tag = "<Tên tài khoản>";
             this.tenTaiKhoanToolStripStatusLabel.Text = "<Tên tài khoản>";
             // 
@@ -145,7 +169,7 @@
             // tenNguoiDungToolStripStatusLabel
             // 
             this.tenNguoiDungToolStripStatusLabel.Name = "tenNguoiDungToolStripStatusLabel";
-            this.tenNguoiDungToolStripStatusLabel.Size = new System.Drawing.Size(107, 17);
+            this.tenNguoiDungToolStripStatusLabel.Size = new System.Drawing.Size(108, 17);
             this.tenNguoiDungToolStripStatusLabel.Tag = "<Tên người dùng>";
             this.tenNguoiDungToolStripStatusLabel.Text = "<Tên người dùng>";
             // 
@@ -156,27 +180,6 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(839, 481);
             this.pnlMain.TabIndex = 2;
-            // 
-            // quảnLýĐềThiToolStripMenuItem
-            // 
-            this.quảnLýĐềThiToolStripMenuItem.Name = "quảnLýĐềThiToolStripMenuItem";
-            this.quảnLýĐềThiToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
-            this.quảnLýĐềThiToolStripMenuItem.Text = "Quản lý đề thi";
-            this.quảnLýĐềThiToolStripMenuItem.Visible = false;
-            // 
-            // quảnLýNgườiDùngToolStripMenuItem
-            // 
-            this.quảnLýNgườiDùngToolStripMenuItem.Name = "quảnLýNgườiDùngToolStripMenuItem";
-            this.quảnLýNgườiDùngToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
-            this.quảnLýNgườiDùngToolStripMenuItem.Text = "Quản lý người dùng";
-            this.quảnLýNgườiDùngToolStripMenuItem.Visible = false;
-            // 
-            // quảnLýCâuHỏiToolStripMenuItem
-            // 
-            this.quảnLýCâuHỏiToolStripMenuItem.Name = "quảnLýCâuHỏiToolStripMenuItem";
-            this.quảnLýCâuHỏiToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
-            this.quảnLýCâuHỏiToolStripMenuItem.Text = "Quản lý câu hỏi";
-            this.quảnLýCâuHỏiToolStripMenuItem.Visible = false;
             // 
             // FrmMain
             // 

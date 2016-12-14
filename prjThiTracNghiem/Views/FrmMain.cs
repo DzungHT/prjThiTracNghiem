@@ -97,5 +97,29 @@ namespace prjThiTracNghiem.Views
         {
             đăngNhậpToolStripMenuItem.Visible = !đăngXuấtToolStripMenuItem.Visible;
         }
+
+        private void quảnLýCâuHỏiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var uc = new _QLCauhoi(2);
+            pnlMain.Controls.Clear();
+            pnlMain.Controls.Add(uc);
+            uc.Dock = DockStyle.Fill;
+        }
+
+        private void quảnLýĐềThiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var uc = new _QLDethi();
+            pnlMain.Controls.Clear();
+            pnlMain.Controls.Add(uc);
+            uc.Dock = DockStyle.Fill;
+        }
+
+        private void quảnLýNgườiDùngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var uc = new _QLNguoidung();
+            pnlMain.Controls.Clear();
+            pnlMain.Controls.Add(uc);
+            uc.Dock = DockStyle.Fill;
+        }
     }
 }
