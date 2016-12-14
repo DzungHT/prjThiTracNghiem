@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_QLNguoidung));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -67,7 +71,7 @@
             this.numPageNumber_DSSinhVien = new System.Windows.Forms.NumericUpDown();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTextSearch_DSSinhVien = new System.Windows.Forms.TextBox();
             this.btnSVXoa = new System.Windows.Forms.Button();
             this.dgv_DSSinhVien = new System.Windows.Forms.DataGridView();
             this.btnSVSua = new System.Windows.Forms.Button();
@@ -78,7 +82,7 @@
             this.numPageNumber_DSBaiThi = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.grvDSBaithi = new System.Windows.Forms.DataGridView();
+            this.dgv_DSBaiThi = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.lblTaiKhoanSinhVien = new System.Windows.Forms.Label();
             this.lblDiaChi = new System.Windows.Forms.Label();
@@ -130,7 +134,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSSinhVien)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPageNumber_DSBaiThi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvDSBaithi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSBaiThi)).BeginInit();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabNguoiDungHeThong.SuspendLayout();
@@ -177,6 +181,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(961, 503);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabGiaoVien
             // 
@@ -221,11 +226,11 @@
             this.cboPageSize_DSGiaoVien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cboPageSize_DSGiaoVien.BackColor = System.Drawing.SystemColors.Window;
             this.cboPageSize_DSGiaoVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboPageSize_DSGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboPageSize_DSGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPageSize_DSGiaoVien.FormattingEnabled = true;
             this.cboPageSize_DSGiaoVien.Location = new System.Drawing.Point(154, 405);
             this.cboPageSize_DSGiaoVien.Name = "cboPageSize_DSGiaoVien";
-            this.cboPageSize_DSGiaoVien.Size = new System.Drawing.Size(59, 24);
+            this.cboPageSize_DSGiaoVien.Size = new System.Drawing.Size(59, 21);
             this.cboPageSize_DSGiaoVien.TabIndex = 9;
             // 
             // numPageNumber_DSGiaoVien
@@ -274,10 +279,10 @@
             // 
             this.txtTextSearch_DSGiaoVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTextSearch_DSGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTextSearch_DSGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTextSearch_DSGiaoVien.Location = new System.Drawing.Point(6, 23);
             this.txtTextSearch_DSGiaoVien.Name = "txtTextSearch_DSGiaoVien";
-            this.txtTextSearch_DSGiaoVien.Size = new System.Drawing.Size(246, 23);
+            this.txtTextSearch_DSGiaoVien.Size = new System.Drawing.Size(246, 20);
             this.txtTextSearch_DSGiaoVien.TabIndex = 3;
             // 
             // btnGVXoa
@@ -300,6 +305,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_DSGiaovien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DSGiaovien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_DSGiaovien.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_DSGiaovien.Location = new System.Drawing.Point(6, 51);
             this.dgv_DSGiaovien.MultiSelect = false;
             this.dgv_DSGiaovien.Name = "dgv_DSGiaovien";
@@ -365,10 +378,11 @@
             this.cboPageSize_DSCauhoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cboPageSize_DSCauhoi.BackColor = System.Drawing.SystemColors.Window;
             this.cboPageSize_DSCauhoi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPageSize_DSCauhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPageSize_DSCauhoi.FormattingEnabled = true;
             this.cboPageSize_DSCauhoi.Location = new System.Drawing.Point(149, 234);
             this.cboPageSize_DSCauhoi.Name = "cboPageSize_DSCauhoi";
-            this.cboPageSize_DSCauhoi.Size = new System.Drawing.Size(60, 24);
+            this.cboPageSize_DSCauhoi.Size = new System.Drawing.Size(60, 21);
             this.cboPageSize_DSCauhoi.TabIndex = 5;
             // 
             // numPageNumber_DSCauHoi
@@ -421,6 +435,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_DSCauhoi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DSCauhoi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_DSCauhoi.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_DSCauhoi.Location = new System.Drawing.Point(6, 19);
             this.dgv_DSCauhoi.Name = "dgv_DSCauhoi";
             this.dgv_DSCauhoi.ReadOnly = true;
@@ -573,7 +595,7 @@
             this.groupBox4.Controls.Add(this.numPageNumber_DSSinhVien);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Controls.Add(this.label15);
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.txtTextSearch_DSSinhVien);
             this.groupBox4.Controls.Add(this.btnSVXoa);
             this.groupBox4.Controls.Add(this.dgv_DSSinhVien);
             this.groupBox4.Controls.Add(this.btnSVSua);
@@ -592,6 +614,7 @@
             this.cboPageSize_DSSinhVien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cboPageSize_DSSinhVien.BackColor = System.Drawing.SystemColors.Window;
             this.cboPageSize_DSSinhVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPageSize_DSSinhVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPageSize_DSSinhVien.FormattingEnabled = true;
             this.cboPageSize_DSSinhVien.Location = new System.Drawing.Point(154, 406);
             this.cboPageSize_DSSinhVien.Name = "cboPageSize_DSSinhVien";
@@ -603,9 +626,20 @@
             this.numPageNumber_DSSinhVien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.numPageNumber_DSSinhVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPageNumber_DSSinhVien.Location = new System.Drawing.Point(426, 407);
+            this.numPageNumber_DSSinhVien.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numPageNumber_DSSinhVien.Name = "numPageNumber_DSSinhVien";
             this.numPageNumber_DSSinhVien.Size = new System.Drawing.Size(46, 23);
             this.numPageNumber_DSSinhVien.TabIndex = 8;
+            this.numPageNumber_DSSinhVien.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numPageNumber_DSSinhVien.ValueChanged += new System.EventHandler(this.numPageNumber_DSSinhVien_ValueChanged);
             // 
             // label14
             // 
@@ -629,14 +663,15 @@
             this.label15.TabIndex = 7;
             this.label15.Text = "Số bản ghi trên trang";
             // 
-            // textBox1
+            // txtTextSearch_DSSinhVien
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtTextSearch_DSSinhVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(6, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(385, 23);
-            this.textBox1.TabIndex = 3;
+            this.txtTextSearch_DSSinhVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTextSearch_DSSinhVien.Location = new System.Drawing.Point(6, 23);
+            this.txtTextSearch_DSSinhVien.Name = "txtTextSearch_DSSinhVien";
+            this.txtTextSearch_DSSinhVien.Size = new System.Drawing.Size(385, 23);
+            this.txtTextSearch_DSSinhVien.TabIndex = 3;
             // 
             // btnSVXoa
             // 
@@ -651,15 +686,29 @@
             // 
             // dgv_DSSinhVien
             // 
+            this.dgv_DSSinhVien.AllowUserToAddRows = false;
+            this.dgv_DSSinhVien.AllowUserToDeleteRows = false;
             this.dgv_DSSinhVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_DSSinhVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DSSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_DSSinhVien.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_DSSinhVien.Location = new System.Drawing.Point(6, 51);
+            this.dgv_DSSinhVien.MultiSelect = false;
             this.dgv_DSSinhVien.Name = "dgv_DSSinhVien";
+            this.dgv_DSSinhVien.ReadOnly = true;
             this.dgv_DSSinhVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_DSSinhVien.Size = new System.Drawing.Size(466, 350);
             this.dgv_DSSinhVien.TabIndex = 0;
+            this.dgv_DSSinhVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DSSinhVien_CellClick);
             // 
             // btnSVSua
             // 
@@ -702,7 +751,7 @@
             this.groupBox5.Controls.Add(this.numPageNumber_DSBaiThi);
             this.groupBox5.Controls.Add(this.label12);
             this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Controls.Add(this.grvDSBaithi);
+            this.groupBox5.Controls.Add(this.dgv_DSBaiThi);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(7, 177);
             this.groupBox5.Name = "groupBox5";
@@ -716,6 +765,7 @@
             this.cboPageSize_DSBaiThi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cboPageSize_DSBaiThi.BackColor = System.Drawing.SystemColors.Window;
             this.cboPageSize_DSBaiThi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboPageSize_DSBaiThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboPageSize_DSBaiThi.FormattingEnabled = true;
             this.cboPageSize_DSBaiThi.Location = new System.Drawing.Point(151, 237);
             this.cboPageSize_DSBaiThi.Name = "cboPageSize_DSBaiThi";
@@ -727,9 +777,19 @@
             this.numPageNumber_DSBaiThi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.numPageNumber_DSBaiThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPageNumber_DSBaiThi.Location = new System.Drawing.Point(398, 238);
+            this.numPageNumber_DSBaiThi.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numPageNumber_DSBaiThi.Name = "numPageNumber_DSBaiThi";
             this.numPageNumber_DSBaiThi.Size = new System.Drawing.Size(46, 23);
             this.numPageNumber_DSBaiThi.TabIndex = 8;
+            this.numPageNumber_DSBaiThi.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label12
             // 
@@ -753,19 +813,28 @@
             this.label13.TabIndex = 7;
             this.label13.Text = "Số bản ghi trên trang";
             // 
-            // grvDSBaithi
+            // dgv_DSBaiThi
             // 
-            this.grvDSBaithi.AllowUserToAddRows = false;
-            this.grvDSBaithi.AllowUserToDeleteRows = false;
-            this.grvDSBaithi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgv_DSBaiThi.AllowUserToAddRows = false;
+            this.dgv_DSBaiThi.AllowUserToDeleteRows = false;
+            this.dgv_DSBaiThi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grvDSBaithi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grvDSBaithi.Location = new System.Drawing.Point(6, 19);
-            this.grvDSBaithi.Name = "grvDSBaithi";
-            this.grvDSBaithi.ReadOnly = true;
-            this.grvDSBaithi.Size = new System.Drawing.Size(438, 212);
-            this.grvDSBaithi.TabIndex = 1;
+            this.dgv_DSBaiThi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DSBaiThi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_DSBaiThi.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_DSBaiThi.Location = new System.Drawing.Point(6, 19);
+            this.dgv_DSBaiThi.Name = "dgv_DSBaiThi";
+            this.dgv_DSBaiThi.ReadOnly = true;
+            this.dgv_DSBaiThi.Size = new System.Drawing.Size(438, 212);
+            this.dgv_DSBaiThi.TabIndex = 1;
             // 
             // groupBox6
             // 
@@ -909,7 +978,7 @@
             this.tabNguoiDungHeThong.Controls.Add(this.groupBox7);
             this.tabNguoiDungHeThong.Location = new System.Drawing.Point(4, 22);
             this.tabNguoiDungHeThong.Name = "tabNguoiDungHeThong";
-            this.tabNguoiDungHeThong.Size = new System.Drawing.Size(845, 465);
+            this.tabNguoiDungHeThong.Size = new System.Drawing.Size(953, 477);
             this.tabNguoiDungHeThong.TabIndex = 2;
             this.tabNguoiDungHeThong.Text = "Người dùng hệ thống";
             this.tabNguoiDungHeThong.UseVisualStyleBackColor = true;
@@ -1175,7 +1244,7 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPageNumber_DSBaiThi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grvDSBaithi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSBaiThi)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -1222,14 +1291,14 @@
         private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.TextBox txtTextSearch_DSGiaoVien;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTextSearch_DSSinhVien;
         private System.Windows.Forms.Button btnSVXoa;
         private System.Windows.Forms.DataGridView dgv_DSSinhVien;
         private System.Windows.Forms.Button btnSVSua;
         private System.Windows.Forms.Button btnSVTimkiem;
         private System.Windows.Forms.Button btnSVThem;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridView grvDSBaithi;
+        private System.Windows.Forms.DataGridView dgv_DSBaiThi;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;

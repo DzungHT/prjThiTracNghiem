@@ -18,7 +18,16 @@ AS
 BEGIN
 	SET NOCOUNT ON;
 	DECLARE @PageCount int
-	SELECT @PageCount = (CASE WHEN COUNT(gv.GiaoVienID) % @p_pageSize = 0 THEN COUNT(gv.GiaoVienID) / @p_pageSize ELSE FLOOR(COUNT(gv.GiaoVienID) / @p_pageSize) + 1 END) FROM GiaoVien gv
+
+	SELECT
+		@PageCount = 
+			(CASE 
+				WHEN COUNT(ch.CauHoiID) % @p_pageSize = 0 THEN COUNT(ch.CauHoiID) / @p_pageSize 
+				ELSE FLOOR(COUNT(ch.CauHoiID) / @p_pageSize) + 1 
+			END) 
+	FROM
+		CauHoi ch
+	INNER JOIN GiaoVien gv ON gv.GiaoVienID = ch.GiaoVienID
 
 	if @PageCount < @p_pageNumber
 		set @p_pageNumber = 1

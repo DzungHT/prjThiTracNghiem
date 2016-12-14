@@ -7,7 +7,7 @@ namespace prjThiTracNghiem.Models
     using System.Data.Entity.Spatial;
 
     [Table("SinhVien")]
-    public partial class SinhVien
+    public partial class SinhVien : INguoiDung
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SinhVien()
@@ -20,10 +20,10 @@ namespace prjThiTracNghiem.Models
         [StringLength(50)]
         public string HoTen { get; set; }
 
-        [StringLength(10)]
+        [StringLength(50)]
         public string NgaySinh { get; set; }
 
-        [StringLength(10)]
+        [StringLength(150)]
         public string DiaChi { get; set; }
 
         [StringLength(10)]
