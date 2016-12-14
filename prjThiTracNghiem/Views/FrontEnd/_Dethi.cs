@@ -26,7 +26,6 @@ namespace prjThiTracNghiem.Views.FrontEnd
             // dổ dữ liệu vào datagridview
             DataSet ds= DataAccess.Instance.ExecuteQuery("sp_LayDanhSachDeThi", CommandType.Text);
             dgvDSDethi.DataSource= ds.Tables[0];
-            
         }
         public void SetThongtindethi(DeThi _dethi)
         {
@@ -50,13 +49,11 @@ namespace prjThiTracNghiem.Views.FrontEnd
                 this.GetDethi(ID,out _objDethi);
             SetThongtindethi(_objDethi);
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            activeUCCauhoi(_objDethi as object, null);
             if (_objDethi != null)
             {
-                
+                activeUCCauhoi(_objDethi as object, null);
             }
             else
             {

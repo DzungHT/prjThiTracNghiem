@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,10 +57,10 @@
             this.check4 = new System.Windows.Forms.CheckBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,54 +80,15 @@
             this.panel2.Size = new System.Drawing.Size(787, 41);
             this.panel2.TabIndex = 1;
             // 
-            // label2
+            // button1
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Đã hoàn thành";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(207, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "câu trong tổng số";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(402, 12);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "câu.";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(156, 12);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(43, 17);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "<số>";
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(634, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Xem đáp án trả lời";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -142,15 +103,54 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "<số>";
             // 
-            // button1
+            // label5
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(634, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Xem đáp án trả lời";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(156, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 17);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "<số>";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(402, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 17);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "câu.";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(207, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(136, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "câu trong tổng số";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(33, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Đã hoàn thành";
             // 
             // label7
             // 
@@ -256,7 +256,7 @@
             this.check1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.check1.AutoSize = true;
-            this.check1.Location = new System.Drawing.Point(123, 260);
+            this.check1.Location = new System.Drawing.Point(140, 260);
             this.check1.Name = "check1";
             this.check1.Size = new System.Drawing.Size(15, 14);
             this.check1.TabIndex = 5;
@@ -328,7 +328,7 @@
             this.check2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.check2.AutoSize = true;
-            this.check2.Location = new System.Drawing.Point(123, 321);
+            this.check2.Location = new System.Drawing.Point(140, 321);
             this.check2.Name = "check2";
             this.check2.Size = new System.Drawing.Size(15, 14);
             this.check2.TabIndex = 5;
@@ -362,7 +362,7 @@
             this.check3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.check3.AutoSize = true;
-            this.check3.Location = new System.Drawing.Point(123, 382);
+            this.check3.Location = new System.Drawing.Point(140, 382);
             this.check3.Name = "check3";
             this.check3.Size = new System.Drawing.Size(15, 14);
             this.check3.TabIndex = 5;
@@ -384,7 +384,7 @@
             this.check4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.check4.AutoSize = true;
-            this.check4.Location = new System.Drawing.Point(123, 443);
+            this.check4.Location = new System.Drawing.Point(140, 443);
             this.check4.Name = "check4";
             this.check4.Size = new System.Drawing.Size(15, 14);
             this.check4.TabIndex = 5;
@@ -437,15 +437,15 @@
             this.panel1.Size = new System.Drawing.Size(788, 544);
             this.panel1.TabIndex = 0;
             // 
-            // button2
+            // button5
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.Location = new System.Drawing.Point(433, 488);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 24);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Tiếp >>";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button5.Location = new System.Drawing.Point(334, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 24);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "<< Quay lại";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -467,15 +467,15 @@
             this.button4.Text = "Tiếp >>";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // button2
             // 
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button5.Location = new System.Drawing.Point(334, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 24);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "<< Quay lại";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button2.Location = new System.Drawing.Point(433, 488);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 24);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Tiếp >>";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // _Cauhoi
             // 

@@ -25,7 +25,6 @@ namespace prjThiTracNghiem.Views.FrontEnd
         bool flagd = false;
         int tongThoiGianThi;
 
-
         private int phut=1;
         TimeSpan ts;
         #endregion
@@ -93,13 +92,18 @@ namespace prjThiTracNghiem.Views.FrontEnd
             if (ts.Minutes == 0 && ts.Seconds == 0)
             {
                 Time.Stop();
-                MessageBox.Show("xong!");
+                MessageBox.Show("Bài thi của bạn đã kết thúc!","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Stop);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Time.Stop();
+            DialogResult dr = MessageBox.Show("Xác nhận kết thúc bài thi!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(dr== DialogResult.Yes)
+            {
+
+            }
         }
     }
 }
