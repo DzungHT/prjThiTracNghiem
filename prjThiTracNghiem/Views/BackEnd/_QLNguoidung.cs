@@ -131,7 +131,7 @@ namespace prjThiTracNghiem.Views.BackEnd
             int ID = int.Parse(dgv_DSSinhVien.SelectedRows[0].Cells[0].Value.ToString());
             _sv = dbc.SinhViens.Where(x => x.SinhVienID == ID).FirstOrDefault();
             lblHoTenSinhVien.Text = _sv.HoTen;
-            lblNgaySinhSinhVien.Text = _sv.NgaySinh.ToShortDateString();
+            lblNgaySinhSinhVien.Text = _sv.NgaySinh;
             lblDiaChi.Text = _sv.DiaChi;
             lblTaiKhoanSinhVien.Text = _sv.TaiKhoan == null ? null : _sv.TaiKhoan.Username;
             lblIDSinhVien.Text = _sv.SinhVienID.ToString();
@@ -168,6 +168,12 @@ namespace prjThiTracNghiem.Views.BackEnd
         private void numPageNumber_DSSinhVien_ValueChanged(object sender, EventArgs e)
         {
             LoadDSSinhVien(string.IsNullOrEmpty(txtTextSearch_DSSinhVien.Text) ? "%" : txtTextSearch_DSSinhVien.Text, (int)numPageNumber_DSSinhVien.Value, int.Parse(cboPageSize_DSSinhVien.SelectedValue.ToString()));
+        }
+
+        private void btnGVThem_Click(object sender, EventArgs e)
+        {
+            _FormGiaovien frm = new _FormGiaovien(null);
+            frm.ShowDialog();
         }
     }
 }

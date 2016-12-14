@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prjThiTracNghiem.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,25 @@ namespace prjThiTracNghiem.Views.BackEnd
 {
     public partial class _FormGiaovien : Form
     {
-        public _FormGiaovien()
+        public GiaoVien ObjGiaoVien { get; set; }
+        private bool IsUpdate { get; set; }
+        public _FormGiaovien(GiaoVien obj)
         {
             InitializeComponent();
+            if(obj == null)
+            {
+                IsUpdate = false;
+            }
+            else
+            {
+                IsUpdate = true;
+                ObjGiaoVien = obj;
+            }
+        }
+
+        private void btnLammoi_Click(object sender, EventArgs e)
+        {
+            txtTenGiaoVien.Text = txtSoDienThoai.Text = txtMatKhau.Text = string.Empty;
         }
     }
 }
