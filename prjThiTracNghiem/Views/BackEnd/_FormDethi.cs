@@ -36,7 +36,19 @@ namespace prjThiTracNghiem.Views.BackEnd
 
         private void Init()
         {
-            comboBox1.Items.Clear();
+            
+            txtDotThi.Text = deThi.DotThi.TenDotThi;
+            txtTenHocPhan.Text = deThi.HocPhan.TenHocPhan;
+            switch (status)
+            {
+                case 0:
+                    {
+                        panel1.Enabled = false;
+                        txtMaDeThi.Text = deThi.MaDeThi;
+                        txtThoiGian.Text = deThi.ThoiGian.ToString();
+                        break;
+                    }
+            }
 
         }
     }
