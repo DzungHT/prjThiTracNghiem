@@ -43,17 +43,26 @@ namespace prjThiTracNghiem.Models
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<CauHoi>()
+                .HasMany(e => e.DapAnCauHois)
+                .WithOptional(e => e.CauHoi)
+                .WillCascadeOnDelete();
+
+            modelBuilder.Entity<CauHoi>()
                 .HasMany(e => e.DeThis)
                 .WithMany(e => e.CauHois)
                 .Map(m => m.ToTable("CauHoiDeThi").MapLeftKey("CauhoiID").MapRightKey("DeThiID"));
+
+            modelBuilder.Entity<DeThi>()
+                .Property(e => e.MaDeThi)
+                .IsUnicode(false);
 
             modelBuilder.Entity<GiaoVien>()
                 .Property(e => e.SDT)
                 .IsUnicode(false);
 
             modelBuilder.Entity<SinhVien>()
-                .Property(e => e.DiaChi)
-                .IsFixedLength();
+                .Property(e => e.NgaySinh)
+                .IsUnicode(false);
 
             modelBuilder.Entity<SinhVien>()
                 .Property(e => e.KhoaHoc)
@@ -66,16 +75,6 @@ namespace prjThiTracNghiem.Models
             modelBuilder.Entity<TaiKhoan>()
                 .Property(e => e.Password)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<TaiKhoan>()
-                .HasMany(e => e.GiaoViens)
-                .WithRequired(e => e.TaiKhoan)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<TaiKhoan>()
-                .HasMany(e => e.SinhViens)
-                .WithRequired(e => e.TaiKhoan)
-                .WillCascadeOnDelete(false);
         }
     }
 }
