@@ -1,7 +1,9 @@
-﻿using System;
+﻿using prjThiTracNghiem.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,19 +24,34 @@ namespace prjThiTracNghiem.Views
         {
             MessageBox.Show(mess, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        private bool Login(string username, string password)
+        private bool Login(string username, string password, out TaiKhoan taiKhoan)
         {
-            return false;
+            MyDbContext db = new MyDbContext();
+            var taikhoans = db.TaiKhoans.Where(x => x.Username == username && x.Password == password).ToList();
+
+            if(taikhoans.Count == 1)
+            {
+                taiKhoan = taikhoans[0];
+                taiKhoan.Password = null;
+                return true;
+            }
+            else
+            {
+                taiKhoan = null;
+                return false;
+            }
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtUsername.Text.Trim()) && !string.IsNullOrEmpty(txtPassword.Text.Trim()))
             {
-                if (Login(txtUsername.Text, txtPassword.Text))
+                TaiKhoan tk;
+                if (Login(txtUsername.Text, txtPassword.Text, out tk))
                 {
                     // Đăng nhập thành công
-                    CallBack(sender, e);
+                    CallBack(tk.LoaiTaiKhoan == 1 ? tk.SinhViens.ToList()[0] as object : tk.GiaoViens.ToList()[0] as object, e);
                     SendKeys.Send("{ESC}");
                 }
                 else

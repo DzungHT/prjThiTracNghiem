@@ -23,15 +23,10 @@ namespace prjThiTracNghiem.Models
         public virtual DbSet<GiaoVien> GiaoViens { get; set; }
         public virtual DbSet<HocPhan> HocPhans { get; set; }
         public virtual DbSet<SinhVien> SinhViens { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<BaiThi>()
-                .Property(e => e.NgayLamBai)
-                .IsUnicode(false);
-
             modelBuilder.Entity<BaiThi>()
                 .HasMany(e => e.CauHoiBaiThis)
                 .WithRequired(e => e.BaiThi)
@@ -52,20 +47,12 @@ namespace prjThiTracNghiem.Models
                 .WithMany(e => e.CauHois)
                 .Map(m => m.ToTable("CauHoiDeThi").MapLeftKey("CauhoiID").MapRightKey("DeThiID"));
 
-            modelBuilder.Entity<Chuong>()
-                .Property(e => e.TenChuong)
-                .IsUnicode(false);
-
             modelBuilder.Entity<DeThi>()
                 .Property(e => e.MaDeThi)
                 .IsFixedLength();
 
             modelBuilder.Entity<GiaoVien>()
                 .Property(e => e.SDT)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<HocPhan>()
-                .Property(e => e.TenHocPhan)
                 .IsUnicode(false);
 
             modelBuilder.Entity<SinhVien>()

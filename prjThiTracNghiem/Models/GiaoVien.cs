@@ -23,7 +23,7 @@ namespace prjThiTracNghiem.Models
         [StringLength(50)]
         public string SDT { get; set; }
 
-        public int TaiKhoanID { get; set; }
+        public int? TaiKhoanID { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CauHoi> CauHois { get; set; }

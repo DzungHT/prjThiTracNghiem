@@ -1,4 +1,5 @@
 ﻿using prjThiTracNghiem.Models;
+using prjThiTracNghiem.Views.BackEnd;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,13 @@ namespace prjThiTracNghiem.Views
 {
     public partial class FrmMain : Form
     {
+        INguoiDung _NguoiDung;
         public FrmMain()
         {
             InitializeComponent();
+            var uc = new _QLNguoidung();
+            pnlMain.Controls.Add(uc);
+            uc.Dock = DockStyle.Fill;
         }
 
         private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
@@ -29,31 +34,29 @@ namespace prjThiTracNghiem.Views
         {
             đăngXuấtToolStripMenuItem.Visible = true;
             đăngNhậpToolStripMenuItem.Visible = false;
-            TaiKhoan taikhoan;
-            if(sender.GetType().Name.Equals("GiaoVien"))
+            _NguoiDung = sender as INguoiDung;
+            tenNguoiDungToolStripStatusLabel.Text = _NguoiDung.HoTen;
+            tenTaiKhoanToolStripStatusLabel.Text = _NguoiDung.TaiKhoan.Username;
+
+
+            if (sender.GetType().Name.Equals("GiaoVien"))
             {
                 // Giao diện của backend
                 MessageBox.Show("GiaoVien");
-                var obj = sender as GiaoVien;
-                taikhoan = obj.TaiKhoan;
-                tenNguoiDungToolStripStatusLabel.Text = obj.TenGiaoVien;
             }
             else
             {
                 // Giao diện frontend
                 MessageBox.Show("SinhVien");
-                var obj = sender as SinhVien;
-                taikhoan = obj.TaiKhoan;
-                tenNguoiDungToolStripStatusLabel.Text = obj.HoTen;
             }
 
-            tenTaiKhoanToolStripStatusLabel.Text = taikhoan.Username;
+           
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var res = MessageBox.Show("Thoát chương trình?", "Xác nhận thoát chương trình", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(res == DialogResult.Yes)
+            if (res == DialogResult.Yes)
             {
                 Application.Exit();
             }

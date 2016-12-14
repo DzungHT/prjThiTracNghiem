@@ -42,8 +42,13 @@
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -58,6 +63,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAccess\DbConfig.cs" />
+    <Compile Include="DataAccess\MSSQLServerDataAcess.cs" />
     <Compile Include="Models\BaiThi.cs" />
     <Compile Include="Models\CauHoi.cs" />
     <Compile Include="Models\CauHoiBaiThi.cs" />
@@ -68,6 +75,7 @@
     <Compile Include="Models\DotThi.cs" />
     <Compile Include="Models\GiaoVien.cs" />
     <Compile Include="Models\HocPhan.cs" />
+    <Compile Include="Models\INguoiDung.cs" />
     <Compile Include="Models\MyDbContext.cs" />
     <Compile Include="Models\SinhVien.cs" />
     <Compile Include="Models\TaiKhoan.cs" />
@@ -85,11 +93,29 @@
     <Compile Include="Views\BackEnd\_FormChuong.Designer.cs">
       <DependentUpon>_FormChuong.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\BackEnd\_FormDethi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\_FormDethi.Designer.cs">
+      <DependentUpon>_FormDethi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BackEnd\_FormGiaovien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\_FormGiaovien.Designer.cs">
+      <DependentUpon>_FormGiaovien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\BackEnd\_FormHocphan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\BackEnd\_FormHocphan.Designer.cs">
       <DependentUpon>_FormHocphan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BackEnd\_FormSinhvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\_FormSinhvien.Designer.cs">
+      <DependentUpon>_FormSinhvien.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\BackEnd\_FormTimkiemCauhoi.cs">
       <SubType>Form</SubType>
@@ -102,6 +128,18 @@
     </Compile>
     <Compile Include="Views\BackEnd\_QLCauhoi.Designer.cs">
       <DependentUpon>_QLCauhoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BackEnd\_QLDethi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\_QLDethi.Designer.cs">
+      <DependentUpon>_QLDethi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BackEnd\_QLNguoidung.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\BackEnd\_QLNguoidung.Designer.cs">
+      <DependentUpon>_QLNguoidung.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -131,14 +169,29 @@
     <EmbeddedResource Include="Views\BackEnd\_FormChuong.resx">
       <DependentUpon>_FormChuong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\BackEnd\_FormDethi.resx">
+      <DependentUpon>_FormDethi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BackEnd\_FormGiaovien.resx">
+      <DependentUpon>_FormGiaovien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\BackEnd\_FormHocphan.resx">
       <DependentUpon>_FormHocphan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BackEnd\_FormSinhvien.resx">
+      <DependentUpon>_FormSinhvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\BackEnd\_FormTimkiemCauhoi.resx">
       <DependentUpon>_FormTimkiemCauhoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\BackEnd\_QLCauhoi.resx">
       <DependentUpon>_QLCauhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BackEnd\_QLDethi.resx">
+      <DependentUpon>_QLDethi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BackEnd\_QLNguoidung.resx">
+      <DependentUpon>_QLNguoidung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -168,6 +221,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\question-icon.png" />
+    <Content Include="Resources\User.png" />
+    <Content Include="Resources\User_Avatar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
