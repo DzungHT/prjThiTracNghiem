@@ -68,9 +68,27 @@ namespace prjThiTracNghiem.Views.FrontEnd
             ts = new TimeSpan(0,phut,0);
             Time.Start();
             var ucCauhoi = new _Cauhoi();
+            ucCauhoi.getDethi(_Dethi);
             PanelContent.Controls.Clear();
             PanelContent.Controls.Add(ucCauhoi);
             ucCauhoi.Dock = DockStyle.Fill;
+        }
+        public List<CauHoi> Thaydoithutucauhoi()
+        {
+            List<CauHoi> lstCauhoi = _Dethi.CauHois.ToList();
+            List<CauHoi> lstNew = new List<CauHoi>();
+            Random r = new Random();
+            while (lstCauhoi.Count > 0)
+            {
+                int index = r.Next(0, lstCauhoi.Count-1);
+                lstNew.Add(lstCauhoi[index]);
+                lstCauhoi.RemoveAt(index);
+            }
+            return lstNew;
+        }
+        public void Taobaithi()
+        {
+            BaiThi bt = new BaiThi();
         }
         #endregion
         public _Main()

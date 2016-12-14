@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using prjThiTracNghiem.Models;
 
 namespace prjThiTracNghiem.Views.FrontEnd
 {
     public partial class _Cauhoi : UserControl
     {
+        DeThi _objDethi; 
         public _Cauhoi()
         {
             InitializeComponent();
+        }
+        public void getDethi(DeThi dt)
+        {
+            _objDethi = dt;
         }
         private void Bat_TatRadio(int radio)
         {
@@ -42,17 +48,13 @@ namespace prjThiTracNghiem.Views.FrontEnd
         }
         private void Luutraloi()
         {
-            if (Kiemtratraloi() == 1)
-            {
-                if (rad1.Checked == true)
-                    arrCauHoi[cauHienTai].CauTraLoi = 1;
-                if (rad2.Checked == true)
-                    arrCauHoi[cauHienTai].CauTraLoi = 2;
-                if (rad3.Checked == true)
-                    arrCauHoi[cauHienTai].CauTraLoi = 3;
-                if (rad4.Checked == true)
-                    arrCauHoi[cauHienTai].CauTraLoi = 4;
-            }
+            //if (Kiemtratraloi() == 1)
+            //{
+            //    if (rad1.Checked == true)
+            //    if (rad2.Checked == true)
+            //    if (rad3.Checked == true)
+            //    if (rad4.Checked == true)
+            //}
         }
         private void Thaydoiloaitraloi(bool x)
         {
