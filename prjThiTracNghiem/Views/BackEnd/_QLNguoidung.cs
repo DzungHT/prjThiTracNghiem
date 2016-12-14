@@ -59,13 +59,13 @@ namespace prjThiTracNghiem.Views.BackEnd
         private void LoadDSGiaoVien(string textSearch, int pageNumber, int pageSize)
         {
             var ds = DataAccess.Instance.ExecuteQuery("sp_Lay_DS_GiaoVien", CommandType.StoredProcedure, new SqlParameter("@p_TextSearch", textSearch), new SqlParameter("@p_pageNumber", pageNumber), new SqlParameter("@p_pageSize", pageSize));
-            
+
             dgv_DSGiaovien.DataSource = ds.Tables[0];
             int PageCount = int.Parse(ds.Tables[1].Rows[0]["PageCount"].ToString());
             numPageNumber_DSGiaoVien.Maximum = PageCount > 1 ? PageCount : 1;
             numPageNumber_DSGiaoVien.Value = int.Parse(ds.Tables[1].Rows[0]["PageNumber"].ToString());
         }
-        
+
         private void LoadDSCauHoi(int GiaoVienID, int pageNumber, int pageSize)
         {
             DataSet ds = DataAccess.Instance.ExecuteQuery("sp_Lay_DS_GiaoVien_CauHoi", CommandType.StoredProcedure, new SqlParameter("@p_GiaoVienID", GiaoVienID), new SqlParameter("@p_pageNumber", pageNumber), new SqlParameter("@p_pageSize", pageSize));
@@ -92,7 +92,7 @@ namespace prjThiTracNghiem.Views.BackEnd
 
             dgv_DSBaiThi.DataSource = ds.Tables[0];
             int PageCount = int.Parse(ds.Tables[1].Rows[0]["PageCount"].ToString());
-            numPageNumber_DSBaiThi.Maximum =  PageCount > 1 ? PageCount : 1;
+            numPageNumber_DSBaiThi.Maximum = PageCount > 1 ? PageCount : 1;
             numPageNumber_DSBaiThi.Value = int.Parse(ds.Tables[1].Rows[0]["PageNumber"].ToString());
         }
 
@@ -185,7 +185,7 @@ namespace prjThiTracNghiem.Views.BackEnd
         private void btnGVXoa_Click(object sender, EventArgs e)
         {
             int ID = int.Parse(dgv_DSGiaovien.SelectedRows[0].Cells[0].Value.ToString());
-            if(ID == 1)
+            if (ID == 1)
             {
                 MessageBox.Show("Không thể xóa tài khoản Administrator!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -218,6 +218,49 @@ namespace prjThiTracNghiem.Views.BackEnd
             _FormGiaovien frmGiaoVien = new _FormGiaovien(gv);
             frmGiaoVien.CallBack += FrmGiaoVien_CallBack;
             frmGiaoVien.ShowDialog();
+        }
+
+        private void btnSVXoa_Click(object sender, EventArgs e)
+        {
+            int ID = int.Parse(dgv_DSSinhVien.SelectedRows[0].Cells[0].Value.ToString());
+            SinhVien sv = dbc.SinhViens.Where(x => x.SinhVienID == ID).FirstOrDefault();
+            var resDlg = MessageBox.Show("Xóa sinh viên\n\nID: " + ID.ToString() + " \nTên sinh viên: " + sv.HoTen, "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (resDlg == DialogResult.Yes)
+            {
+                var ds = DataAccess.Instance.ExecuteQuery("sp_Xoa_SinhVien", CommandType.StoredProcedure, new SqlParameter("@SinhVienID", sv.SinhVienID), new SqlParameter("@TaiKhoanID", sv.TaiKhoanID));
+
+                if (ds.Tables.Count == 0)
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông báo");
+                    LoadDSSinhVien(string.IsNullOrEmpty(txtTextSearch_DSSinhVien.Text) ? "%" : txtTextSearch_DSSinhVien.Text, (int)numPageNumber_DSSinhVien.Value, int.Parse(cboPageSize_DSSinhVien.SelectedValue.ToString()));
+                }
+                else
+                {
+                    MessageBox.Show("Xóa không thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnSVThem_Click(object sender, EventArgs e)
+        {
+            _FormSinhvien frmSinhVien = new _FormSinhvien(null);
+            frmSinhVien.CallBack += FrmSinhVien_CallBack;
+            frmSinhVien.ShowDialog();
+        }
+
+        private void FrmSinhVien_CallBack(object sender, EventArgs e)
+        {
+            LoadDSSinhVien(string.IsNullOrEmpty(txtTextSearch_DSSinhVien.Text) ? "%" : txtTextSearch_DSSinhVien.Text, (int)numPageNumber_DSSinhVien.Value, int.Parse(cboPageSize_DSSinhVien.SelectedValue.ToString()));
+        }
+
+        private void btnSVSua_Click(object sender, EventArgs e)
+        {
+            int ID = int.Parse(dgv_DSSinhVien.SelectedRows[0].Cells[0].Value.ToString());
+            var sv = dbc.SinhViens.Where(x => x.SinhVienID == ID).FirstOrDefault();
+            _FormSinhvien frmSinhVien = new _FormSinhvien(sv);
+            frmSinhVien.CallBack += FrmSinhVien_CallBack;
+            frmSinhVien.ShowDialog();
         }
     }
 }
