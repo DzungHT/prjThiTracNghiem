@@ -44,14 +44,14 @@ namespace prjThiTracNghiem.Views.FrontEnd
         {
             if (Kiemtratraloi() == 1)
             {
-                if (rad1.Checked == true)
-                    arrCauHoi[cauHienTai].CauTraLoi = 1;
-                if (rad2.Checked == true)
-                    arrCauHoi[cauHienTai].CauTraLoi = 2;
-                if (rad3.Checked == true)
-                    arrCauHoi[cauHienTai].CauTraLoi = 3;
-                if (rad4.Checked == true)
-                    arrCauHoi[cauHienTai].CauTraLoi = 4;
+                //if (rad1.Checked == true)
+                //    arrCauHoi[cauHienTai].CauTraLoi = 1;
+                //if (rad2.Checked == true)
+                //    arrCauHoi[cauHienTai].CauTraLoi = 2;
+                //if (rad3.Checked == true)
+                //    arrCauHoi[cauHienTai].CauTraLoi = 3;
+                //if (rad4.Checked == true)
+                //    arrCauHoi[cauHienTai].CauTraLoi = 4;
             }
         }
         private void Thaydoiloaitraloi(bool x)
